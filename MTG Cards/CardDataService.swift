@@ -18,6 +18,8 @@ typealias CardSearchCallback = (Error?, [Card]?) -> Void
 /// Class that is responsible for retrieving the Card Data
 class CardDataService {
 
+    static var shared = CardDataService()
+
     struct Constants {
         static let baseURL = "https://api.magicthegathering.io/v1/cards"
         static let cardNameParameter = "name"

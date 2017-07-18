@@ -15,7 +15,7 @@ class Card {
     let id: String
     let name: String
     let manaCost: String
-    let cmc: String
+    let cmc: Int
     let colors: [String]
     let colorIdentity: [String]
     let type: String
@@ -32,7 +32,7 @@ class Card {
         id = dictionary["id"] as? String ?? ""
         name = dictionary["name"] as? String ?? ""
         manaCost = dictionary["manaCost"] as? String ?? ""
-        cmc = dictionary["cmc"] as? String ?? ""
+        cmc = dictionary["cmc"] as? Int ?? -1
         colors = dictionary["colors"] as? [String] ?? []
         colorIdentity = dictionary["colorIdentity"] as? [String] ?? []
         type = dictionary["type"] as? String ?? ""

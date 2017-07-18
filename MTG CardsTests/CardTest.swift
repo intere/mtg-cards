@@ -14,6 +14,7 @@ class CardTest: XCTestCase {
     struct Constants {
         static let testString = "ABCDEFG"
         static let testStringArray: [String] = [ "ABC", "DEF", "GHI"]
+        static let testInt = 7
     }
 
     /// Ensure that we can create a card from an empty dictionary
@@ -23,7 +24,7 @@ class CardTest: XCTestCase {
         XCTAssertEqual("", card.id)
         XCTAssertEqual("", card.name)
         XCTAssertEqual("", card.manaCost)
-        XCTAssertEqual("", card.cmc)
+        XCTAssertEqual(-1, card.cmc)
         XCTAssertEqual([], card.colors)
         XCTAssertEqual([], card.colorIdentity)
         XCTAssertEqual("", card.type)
@@ -61,8 +62,8 @@ class CardTest: XCTestCase {
     /// Validate that when we initialize a card with the "cmc" property
     /// The card has that value mapped correctly
     func testCardInitializeWithCmc() {
-        let card = Card(from: ["cmc": Constants.testString])
-        XCTAssertEqual(card.cmc, Constants.testString)
+        let card = Card(from: ["cmc": Constants.testInt])
+        XCTAssertEqual(card.cmc, Constants.testInt)
     }
 
     /// Validate that when we initialize a card with the "colors" property
