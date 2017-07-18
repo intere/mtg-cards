@@ -9,6 +9,14 @@
 import Kingfisher
 import UIKit
 
+protocol CardImageLoadedDelegate: class {
+
+    /// Tells the delegate that the cell's image has loaded
+    ///
+    /// - Parameter indexPath: The IndexPath that the image has been loaded at.
+    func imageLoaded(for card: Card)
+}
+
 class CardSearchResultTableViewCell: UITableViewCell {
 
     struct Constants {
@@ -17,13 +25,13 @@ class CardSearchResultTableViewCell: UITableViewCell {
 
     @IBOutlet var cardNameLabel: UILabel!
     @IBOutlet var cardImageView: UIImageView!
+    var delegate: CardImageLoadedDelegate?
 
     var card: Card? {
         didSet {
             updateCell()
         }
     }
-
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,7 +55,13 @@ extension CardSearchResultTableViewCell {
         }
 
         cardNameLabel.text = card.name
-        cardImageView.kf.setImage(with: URL(string: card.imageUrlString))
+
+        guard let imageURL = URL(string: card.imageUrlString) else {
+            return
+        }
+        cardImageView.kf.setImage(with: imageURL) { [weak self] (image, error, cache, url) in
+            self?.delegate?.imageLoaded(for: card)
+        }
     }
 
 }

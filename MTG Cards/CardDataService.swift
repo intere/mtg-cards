@@ -32,13 +32,14 @@ class CardDataService {
         static let noDataError: Error = {
             return NSError(domain: "MTG Card Search", code: 2, userInfo: [NSLocalizedDescriptionKey: "The server responded back without any data"])
         }()
-
-        static let non200Error: Error = {
-            return NSError(domain: "MTG Card Search", code: 3, userInfo: [NSLocalizedDescriptionKey: "The server responded back with a non-success response"])
+        static let internalError: Error = {
+            return NSError(domain: "MTG Card Search", code: 3, userInfo: [NSLocalizedDescriptionKey: "Application Error trying to parse server response"])
         }()
-
+        static let non200Error: Error = {
+            return NSError(domain: "MTG Card Search", code: 4, userInfo: [NSLocalizedDescriptionKey: "The server responded back with a non-success response"])
+        }()
         static let invalidFormatError: Error = {
-            return NSError(domain: "MTG Card Search", code: 4, userInfo: [NSLocalizedDescriptionKey: "The server returned data in an unexpected format"])
+            return NSError(domain: "MTG Card Search", code: 5, userInfo: [NSLocalizedDescriptionKey: "The server returned data in an unexpected format"])
         }()
 
     }
@@ -66,7 +67,13 @@ class CardDataService {
             }
 
             // Make sure we got back a 200 response
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            guard let response = response as? HTTPURLResponse else {
+                return callback(Constants.internalError, nil)
+            }
+
+            // Make sure we got back a 200 response
+            guard response.statusCode == 200 else {
+                print("HTTP Status Code: \(response.statusCode)")
                 return callback(Constants.non200Error, nil)
             }
 
