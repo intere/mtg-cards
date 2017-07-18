@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MTG_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,89 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhE-LH-Nwk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <segue destination="9kJ-WC-4BL" kind="embed" id="Y5K-5r-63N"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EhE-LH-Nwk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zsy-2m-F7T"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EhE-LH-Nwk" secondAttribute="bottom" id="l7K-AG-sm9"/>
+                            <constraint firstItem="EhE-LH-Nwk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qFB-8Z-rYb"/>
+                            <constraint firstAttribute="trailing" secondItem="EhE-LH-Nwk" secondAttribute="trailing" id="yMl-KG-Hlm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Card Search Result Table View Controller-->
+        <scene sceneID="sLO-BY-Myf">
+            <objects>
+                <tableViewController storyboardIdentifier="CardSearchResultTableViewController" id="9kJ-WC-4BL" customClass="CardSearchResultTableViewController" customModule="MTG_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FFK-5N-EFt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" showsCancelButton="YES" id="9yt-xL-thG">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="9kJ-WC-4BL" id="THC-GZ-DKb"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardSearchResultCell" rowHeight="400" id="lwB-HQ-fbg" customClass="CardSearchResultTableViewCell" customModule="MTG_Cards" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="400"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lwB-HQ-fbg" id="hKU-yH-kIo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="399.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juggernaut" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gv-0i-tT6">
+                                            <rect key="frame" x="8" y="8" width="359" height="20"/>
+                                            <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kde-H8-JxW">
+                                            <rect key="frame" x="8" y="36" width="359" height="356"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2Gv-0i-tT6" firstAttribute="leading" secondItem="hKU-yH-kIo" secondAttribute="leadingMargin" id="0fx-EA-YJZ"/>
+                                        <constraint firstItem="2Gv-0i-tT6" firstAttribute="top" secondItem="hKU-yH-kIo" secondAttribute="topMargin" id="bD1-2h-ZB6"/>
+                                        <constraint firstItem="2Gv-0i-tT6" firstAttribute="trailing" secondItem="hKU-yH-kIo" secondAttribute="trailingMargin" id="eFF-1M-Dz2"/>
+                                        <constraint firstAttribute="bottom" secondItem="kde-H8-JxW" secondAttribute="bottom" constant="8" id="p28-wB-Ovr"/>
+                                        <constraint firstAttribute="trailing" secondItem="kde-H8-JxW" secondAttribute="trailing" constant="8" id="tfP-Xe-L1I"/>
+                                        <constraint firstItem="kde-H8-JxW" firstAttribute="top" secondItem="2Gv-0i-tT6" secondAttribute="bottom" constant="8" id="v10-LQ-ehM"/>
+                                        <constraint firstItem="kde-H8-JxW" firstAttribute="leading" secondItem="hKU-yH-kIo" secondAttribute="leading" constant="8" id="y1K-GD-aa2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cardImageView" destination="kde-H8-JxW" id="qPd-Oa-dsz"/>
+                                    <outlet property="cardNameLabel" destination="2Gv-0i-tT6" id="36A-IX-ZU0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9kJ-WC-4BL" id="1rW-M5-tRH"/>
+                            <outlet property="delegate" destination="9kJ-WC-4BL" id="qHT-pq-IxJ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="9yt-xL-thG" id="mEC-ZZ-kjn"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQs-BQ-h1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="906.29685157421295"/>
         </scene>
     </scenes>
 </document>

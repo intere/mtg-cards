@@ -16,6 +16,8 @@
 		36FB15B81F1E7EFB000E1E0F /* CardDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15B71F1E7EFB000E1E0F /* CardDataService.swift */; };
 		36FB15BB1F1E816F000E1E0F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15BA1F1E816F000E1E0F /* Card.swift */; };
 		36FB15BE1F1E83B1000E1E0F /* CardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15BD1F1E83B1000E1E0F /* CardTest.swift */; };
+		36FB15C21F1E9067000E1E0F /* CardSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15C11F1E9067000E1E0F /* CardSearchResultTableViewCell.swift */; };
+		36FB15C41F1E91C6000E1E0F /* CardSearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15C31F1E91C6000E1E0F /* CardSearchResultTableViewController.swift */; };
 		77B2D4F9B0139664935687E8 /* Pods_MTG_Cards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2A4BC5CD19F1140C500B46 /* Pods_MTG_Cards.framework */; };
 		A06E3E4F85897D2FF4E27366 /* Pods_MTG_CardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C09DD5716395FC0EA95874 /* Pods_MTG_CardsTests.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		36FB15B71F1E7EFB000E1E0F /* CardDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDataService.swift; sourceTree = "<group>"; };
 		36FB15BA1F1E816F000E1E0F /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		36FB15BD1F1E83B1000E1E0F /* CardTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTest.swift; sourceTree = "<group>"; };
+		36FB15C11F1E9067000E1E0F /* CardSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		36FB15C31F1E91C6000E1E0F /* CardSearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchResultTableViewController.swift; sourceTree = "<group>"; };
 		52959FBBFAF1E14844257618 /* Pods-MTG Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTG Cards/Pods-MTG Cards.debug.xcconfig"; sourceTree = "<group>"; };
 		9E2A4BC5CD19F1140C500B46 /* Pods_MTG_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTG_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C7D06EA111ADAFBFEA098F /* Pods-MTG CardsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTG CardsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTG CardsTests/Pods-MTG CardsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 		36FB15951F1E7B83000E1E0F /* MTG Cards */ = {
 			isa = PBXGroup;
 			children = (
+				36FB15BF1F1E903C000E1E0F /* Controllers */,
 				36FB15B91F1E8166000E1E0F /* Models */,
 				36FB15B61F1E7B95000E1E0F /* Data */,
 				36FB15961F1E7B83000E1E0F /* AppDelegate.swift */,
@@ -139,6 +144,23 @@
 				36FB15BD1F1E83B1000E1E0F /* CardTest.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		36FB15BF1F1E903C000E1E0F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36FB15C01F1E9045000E1E0F /* Views */,
+				36FB15C31F1E91C6000E1E0F /* CardSearchResultTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		36FB15C01F1E9045000E1E0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36FB15C11F1E9067000E1E0F /* CardSearchResultTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		78A1547B91EB1408BB940881 /* Frameworks */ = {
@@ -365,7 +387,9 @@
 			files = (
 				36FB15B81F1E7EFB000E1E0F /* CardDataService.swift in Sources */,
 				36FB15991F1E7B83000E1E0F /* ViewController.swift in Sources */,
+				36FB15C21F1E9067000E1E0F /* CardSearchResultTableViewCell.swift in Sources */,
 				36FB15971F1E7B83000E1E0F /* AppDelegate.swift in Sources */,
+				36FB15C41F1E91C6000E1E0F /* CardSearchResultTableViewController.swift in Sources */,
 				36FB15BB1F1E816F000E1E0F /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
