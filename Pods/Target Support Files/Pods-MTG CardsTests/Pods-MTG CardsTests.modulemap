@@ -1,0 +1,6 @@
+framework module Pods_MTG_CardsTests {
+  umbrella header "Pods-MTG CardsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
