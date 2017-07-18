@@ -40,17 +40,9 @@ class CardDataServiceIntegrationTest: XCTestCase {
                 XCTAssertNotEqual("", card.set)
                 XCTAssertNotEqual("", card.text)
 
-                // Sometimes there is no CMC in the data:
-//                XCTAssertNotEqual(-1, card.cmc, "Invalid CMC at index \(i)")
-
-                // Other things that don't always appear
-//                XCTAssertNotEqual("", card.manaCost)
-//                XCTAssertNotEqual([], card.colors)
-//                XCTAssertNotEqual([], card.colorIdentity)
-//                XCTAssertNotEqual([], card.subtypes)
-//                XCTAssertNotEqual("", card.power)
-//                XCTAssertNotEqual("", card.toughness)
-//                XCTAssertNotEqual("", card.imageUrlString, "Empty Image URL at index \(i)")
+                // cmc, manaCost, colors, colorIdentity, subtypes, power, toughness
+                // and imageUrlString are not guaranteed to be in the response
+                // so I've skipped the assertions here
             }
         }
 
@@ -91,10 +83,9 @@ class CardDataServiceIntegrationTest: XCTestCase {
                 XCTAssertNotEqual([], card.colorIdentity)
                 XCTAssertNotEqual(-1, card.cmc)
 
-//                XCTAssertNotEqual([], card.subtypes)
-//                XCTAssertNotEqual("", card.power)
-//                XCTAssertNotEqual("", card.toughness)
-//                XCTAssertNotEqual("", card.imageUrlString, "Empty Image URL at index \(i)")
+                // subtypes, power, toughness and imageUrlString are not 
+                // guaranteed to be in the response, particularly for the card "lightning bolt"
+                // so I've skipped the assertions here
             }
         }
         
