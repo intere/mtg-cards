@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3666E1D71F2F637A0017A7C3 /* URLSessionPrototypingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */; };
 		36FB15971F1E7B83000E1E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15961F1E7B83000E1E0F /* AppDelegate.swift */; };
 		36FB15991F1E7B83000E1E0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15981F1E7B83000E1E0F /* ViewController.swift */; };
 		36FB159C1F1E7B83000E1E0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FB159A1F1E7B83000E1E0F /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionPrototypingTest.swift; sourceTree = "<group>"; };
 		36FB15931F1E7B83000E1E0F /* MTG Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTG Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FB15961F1E7B83000E1E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36FB15981F1E7B83000E1E0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3666E1D51F2F63430017A7C3 /* Prototyping */ = {
+			isa = PBXGroup;
+			children = (
+				3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */,
+			);
+			name = Prototyping;
+			sourceTree = "<group>";
+		};
 		36FB158A1F1E7B83000E1E0F = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		36FB15AA1F1E7B83000E1E0F /* MTG CardsTests */ = {
 			isa = PBXGroup;
 			children = (
+				3666E1D51F2F63430017A7C3 /* Prototyping */,
 				36FB15BC1F1E83A6000E1E0F /* Models */,
 				36FB15C51F1E9431000E1E0F /* Services */,
 				36FB15AD1F1E7B83000E1E0F /* Info.plist */,
@@ -408,6 +419,7 @@
 			files = (
 				36FB15C71F1E9451000E1E0F /* CardDataServiceIntegrationTest.swift in Sources */,
 				36FB15BE1F1E83B1000E1E0F /* CardTest.swift in Sources */,
+				3666E1D71F2F637A0017A7C3 /* URLSessionPrototypingTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
