@@ -49,10 +49,30 @@ extension CardSearchUITest {
             return XCTFail("Failed to get the Card Search VC, it was \(topVCType)")
         }
         XCTAssertTrue(waitForCondition({
-            return self.cardSearchVC?.tableView.numberOfRows(inSection: 0) == 1
+            return self.cardSearchVC?.tableView.numberOfRows(inSection: 0) == 1 &&
+                CardSearchResultTableViewController.Constants.enterSearchCellId == cardSearchVC.tableView(cardSearchVC.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier
         }, timeout: 1), "We didn't get the correct number of rows")
 
         XCTAssertEqual(CardSearchResultTableViewController.Constants.enterSearchCellId, cardSearchVC.tableView(cardSearchVC.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier)
+    }
+
+    func testNoResultsInSearch() {
+        guard let cardSearchVC = cardSearchVC else {
+            return XCTFail("Failed to get the Card Search VC, it was \(topVCType)")
+        }
+
+        // Show what we're searching for
+        cardSearchVC.searchBar.text = "Drunken"
+
+        // Invoke the search for "Drunken" (we know there are no results, since we control the data source)
+        cardSearchVC.search(for: "Drunken")
+
+        XCTAssertTrue(waitForCondition({
+            return self.cardSearchVC?.tableView.numberOfRows(inSection: 0) == 1 &&
+                CardSearchResultTableViewController.Constants.noResultsCellId == cardSearchVC.tableView(cardSearchVC.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier
+        }, timeout: 1), "We didn't get the correct number of rows")
+
+        XCTAssertEqual(CardSearchResultTableViewController.Constants.noResultsCellId, cardSearchVC.tableView(cardSearchVC.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier)
     }
 
 }
