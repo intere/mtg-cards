@@ -13,6 +13,12 @@ class CardSearchResultTableViewController: UITableViewController {
     @IBOutlet var searchBar: UISearchBar!
     var results: [Card]?
 
+    struct Constants {
+        static let noResultsCellId = "NoResultsCell"
+        static let enterSearchCellId = "EnterSearchCell"
+
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,20 +38,27 @@ class CardSearchResultTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let results = results else {
-            return 0
+        guard let results = results, results.count > 0 else {
+            return 1
         }
         return results.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let results = results else {
+            return tableView.dequeueReusableCell(withIdentifier: Constants.enterSearchCellId, for: indexPath)
+        }
+        guard results.count > 0 else {
+            return tableView.dequeueReusableCell(withIdentifier: Constants.noResultsCellId, for: indexPath)
+        }
+
         let cell = tableView.dequeueReusableCell(withIdentifier: CardSearchResultTableViewCell.Constants.cellID, for: indexPath)
 
         guard let cardCell = cell as? CardSearchResultTableViewCell else {
             return cell
         }
         cardCell.delegate = self
-        cardCell.card = results?[indexPath.row]
+        cardCell.card = results[indexPath.row]
 
         return cardCell
     }

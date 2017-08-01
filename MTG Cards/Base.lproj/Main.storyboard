@@ -14,7 +14,7 @@
         <scene sceneID="sLO-BY-Myf">
             <objects>
                 <tableViewController storyboardIdentifier="CardSearchResultTableViewController" id="9kJ-WC-4BL" customClass="CardSearchResultTableViewController" customModule="MTG_Cards" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FFK-5N-EFt">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FFK-5N-EFt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,7 +43,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lwB-HQ-fbg" id="hKU-yH-kIo">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="399.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juggernaut" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gv-0i-tT6">
@@ -70,6 +70,50 @@
                                     <outlet property="cardImageView" destination="kde-H8-JxW" id="qPd-Oa-dsz"/>
                                     <outlet property="cardNameLabel" destination="2Gv-0i-tT6" id="36A-IX-ZU0"/>
                                 </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoResultsCell" id="b8h-4c-7TJ">
+                                <rect key="frame" x="0.0" y="488" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b8h-4c-7TJ" id="i9O-J2-ra1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, there are no results that matched your criteria." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJr-1T-Osx">
+                                            <rect key="frame" x="8" y="11" width="359" height="22"/>
+                                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WJr-1T-Osx" secondAttribute="bottom" constant="3" id="DDO-33-U0L"/>
+                                        <constraint firstItem="WJr-1T-Osx" firstAttribute="trailing" secondItem="i9O-J2-ra1" secondAttribute="trailingMargin" id="Lk8-RI-yve"/>
+                                        <constraint firstItem="WJr-1T-Osx" firstAttribute="top" secondItem="i9O-J2-ra1" secondAttribute="topMargin" constant="3" id="OVg-dZ-EZf"/>
+                                        <constraint firstItem="WJr-1T-Osx" firstAttribute="leading" secondItem="i9O-J2-ra1" secondAttribute="leadingMargin" id="wt3-0z-eQZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EnterSearchCell" id="Lju-mD-McI">
+                                <rect key="frame" x="0.0" y="532" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lju-mD-McI" id="HDq-zd-z4q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a search above to find some cards." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDN-I5-eWp">
+                                            <rect key="frame" x="8" y="11" width="359" height="22"/>
+                                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bDN-I5-eWp" secondAttribute="bottom" constant="3" id="7bu-KB-tZL"/>
+                                        <constraint firstItem="bDN-I5-eWp" firstAttribute="top" secondItem="HDq-zd-z4q" secondAttribute="topMargin" constant="3" id="LwV-1B-Sy5"/>
+                                        <constraint firstItem="bDN-I5-eWp" firstAttribute="leading" secondItem="HDq-zd-z4q" secondAttribute="leadingMargin" id="YKV-SV-qGb"/>
+                                        <constraint firstItem="bDN-I5-eWp" firstAttribute="trailing" secondItem="HDq-zd-z4q" secondAttribute="trailingMargin" id="kkF-Bb-tjk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -33,10 +33,28 @@ class CardSearchUITest: BaseUITest {
     override func tearDown() {
         // Stop Mocking (swap the real card service back in)
         MockCardDataService.endMocking()
+        cardSearchVC?.tapCancel()
 
         super.tearDown()
     }
     
+}
+
+// MARK: - Haven't yet or cancelled search
+
+extension CardSearchUITest {
+
+    func testNoSearch() {
+        guard let cardSearchVC = cardSearchVC else {
+            return XCTFail("Failed to get the Card Search VC, it was \(topVCType)")
+        }
+        XCTAssertTrue(waitForCondition({
+            return self.cardSearchVC?.tableView.numberOfRows(inSection: 0) == 1
+        }, timeout: 1), "We didn't get the correct number of rows")
+
+        XCTAssertEqual(CardSearchResultTableViewController.Constants.enterSearchCellId, cardSearchVC.tableView(cardSearchVC.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier)
+    }
+
 }
 
 // MARK: - Perform a search
@@ -96,3 +114,17 @@ extension CardSearchUITest {
 
 }
 
+
+// MARK: - Helpers
+
+extension CardSearchResultTableViewController {
+
+    /// Simulates tapping the cancel button on the search bar
+    func tapCancel() {
+        guard let searchBar = searchBar else {
+            return
+        }
+        searchBarCancelButtonClicked(searchBar)
+    }
+
+}
