@@ -105,7 +105,7 @@ extension CardSearchResultTableViewController {
     }
 
     func search(for cardNamed: String) {
-        CardDataService.shared.search(for: cardNamed) { (error, cards) in
+        RemoteCardService.shared.search(for: cardNamed) { (error, cards) in
             if let error = error {
                 return print("ERROR searching for card \(cardNamed): \(error)")
             }

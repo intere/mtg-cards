@@ -1,5 +1,5 @@
 //
-//  CardData.swift
+//  RemoteCardService.swift
 //  MTG Cards
 //
 //  Created by Eric Internicola on 7/18/17.
@@ -13,12 +13,10 @@ import Foundation
 // https://api.magicthegathering.io/v1/cards?name=nissa
 
 
-typealias CardSearchCallback = (Error?, [Card]?) -> Void
-
 /// Class that is responsible for retrieving the Card Data
-class CardDataService {
+class RemoteCardService {
 
-    static var shared = CardDataService()
+    static var shared: CardService = RemoteCardService()
 
     struct Constants {
         static let baseURL = "https://api.magicthegathering.io/v1/cards"
@@ -43,6 +41,10 @@ class CardDataService {
         }()
 
     }
+
+}
+
+extension RemoteCardService: CardService {
 
     /// Searches the API for a specific card and calls back with success or failure
     ///
@@ -87,7 +89,7 @@ class CardDataService {
                     return callback(Constants.invalidFormatError, nil)
                 }
 
-                callback(nil, cardMaps.map{Card(from: $0)})
+                callback(nil, cardMaps.map({Card(from: $0)}).sorted(by: { return $0.name < $1.name }))
 
             } catch let error {
                 callback(error, nil)
@@ -100,7 +102,7 @@ class CardDataService {
 
 // MARK: - Implementation
 
-extension CardDataService {
+extension RemoteCardService {
 
     func searchURL(for cardNamed: String) -> URL? {
         guard let components = NSURLComponents(string: Constants.baseURL) else {
