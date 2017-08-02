@@ -134,8 +134,90 @@ extension CardSearchUITest {
 
 }
 
+// MARK: - Demo
+
+extension CardSearchUITest {
+
+    func testAppDemo() {
+        guard let cardSearchVC = cardSearchVC else {
+            return XCTFail("Couldn't get a reference to the Card Search VC, it was \(topVCType)")
+        }
+
+        var searchTerm = "Bat"
+        delayTypingWord(word: searchTerm)
+        cardSearchVC.search(for: searchTerm)
+
+        XCTAssertTrue(waitForCondition({
+            return cardSearchVC.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) is CardSearchResultTableViewCell
+        }, timeout: 3), "No search reults were available")
+
+        waitForDuration(1)
+
+        searchTerm = "Na"
+        delayTypingWord(word: searchTerm)
+        cardSearchVC.search(for: searchTerm)
+
+        XCTAssertTrue(waitForCondition({
+            return cardSearchVC.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) is CardSearchResultTableViewCell
+        }, timeout: 3), "No search reults were available")
+
+        XCTAssertEqual(2, self.cardSearchVC?.tableView.numberOfRows(inSection: 0))
+        waitForDuration(0.5)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 1, section: 0), at: .middle, animated: true)
+        waitForDuration(1)
+
+        searchTerm = "R"
+
+        delayTypingWord(word: searchTerm)
+        cardSearchVC.search(for: searchTerm)
+
+        XCTAssertTrue(waitForCondition({
+            return cardSearchVC.tableView.numberOfRows(inSection: 0) == 15
+        }, timeout: 3), "Wrong number of results were available")
+
+        XCTAssertEqual(15, self.cardSearchVC?.tableView.numberOfRows(inSection: 0))
+
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 1, section: 0), at: .bottom, animated: true)
+        waitForDuration(1)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 3, section: 0), at: .bottom, animated: true)
+        waitForDuration(1)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 5, section: 0), at: .bottom, animated: true)
+        waitForDuration(1)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 7, section: 0), at: .bottom, animated: true)
+        waitForDuration(1)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 9, section: 0), at: .bottom, animated: true)
+        waitForDuration(1)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 13, section: 0), at: .bottom, animated: true)
+        waitForDuration(2)
+    }
+}
+
 
 // MARK: - Helpers
+
+extension CardSearchUITest {
+
+    func delayTypingWord(word: String, delay: TimeInterval = 0.5) {
+        guard let cardSearchVC = cardSearchVC else {
+            return
+        }
+
+        cardSearchVC.searchBar.text = ""
+
+        var index = word.startIndex
+        while index != word.endIndex {
+            waitForDuration(delay)
+            cardSearchVC.searchBar.text = word.substring(to: index)
+            index = word.index(after: index)
+        }
+
+        waitForDuration(delay)
+        cardSearchVC.searchBar.text = word
+
+        waitForDuration(delay * 2)
+    }
+
+}
 
 extension CardSearchResultTableViewController {
 

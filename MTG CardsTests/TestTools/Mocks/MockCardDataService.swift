@@ -23,7 +23,7 @@ class MockCardDataService {
             Card(name: "The Doctor", imageUrlString: "https://s-media-cache-ak0.pinimg.com/564x/b9/17/a9/b917a91bd3d29570b87f5ac76a919b74.jpg"),
             Card(name: "The Death Star", imageUrlString: "https://s-media-cache-ak0.pinimg.com/564x/29/d7/fd/29d7fd69d89794d4235c2b2029a22b8e.jpg"),
             Card(name: "Darth Sidious, Sith Lord", imageUrlString: "https://s-media-cache-ak0.pinimg.com/564x/0d/35/81/0d358183ea84851ec4c52bc44b8b2ac3.jpg"),
-            Card(name: "Batman, THe Dark Knight", imageUrlString: "https://s-media-cache-ak0.pinimg.com/564x/51/4b/e7/514be7395722d1e0d64cd9638ffcff33.jpg"),
+            Card(name: "Batman, The Dark Knight", imageUrlString: "https://s-media-cache-ak0.pinimg.com/564x/51/4b/e7/514be7395722d1e0d64cd9638ffcff33.jpg"),
             Card(name: "Kirk, Enterprise Captain", imageUrlString: "https://s-media-cache-ak0.pinimg.com/564x/24/df/e2/24dfe22325d9bca873009d50e60237c4.jpg"),
             Card(name: "Force of Will", imageUrlString: "https://s-media-cache-ak0.pinimg.com/564x/ca/2e/08/ca2e085282f126bcfd73df681dc257ce.jpg"),
             Card(name: "Stephen Colbert", imageUrlString: "https://s-media-cache-ak0.pinimg.com/564x/3a/d5/23/3ad5232d152e110200fba9c224389439.jpg"),
