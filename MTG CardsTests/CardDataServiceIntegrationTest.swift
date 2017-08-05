@@ -9,12 +9,15 @@
 @testable import MTG_Cards
 import XCTest
 
+
+/// This is an integration test, becuse it actaully reaches out to the "Real API" to execute a query
+/// This is a good test that serves as documentation to show us how to use the RemoteCardService 
 class CardDataServiceIntegrationTest: XCTestCase {
 
     func testFetchSingleWord() {
         let exp = expectation(description: "MTG Server Response")
 
-        CardDataService.shared.search(for: "Lotus") { (error, cards) in
+        RemoteCardService.shared.search(for: "Lotus") { (error, cards) in
             defer {
                 exp.fulfill()
             }
@@ -52,7 +55,7 @@ class CardDataServiceIntegrationTest: XCTestCase {
     func testFetchMultipleWords() {
         let exp = expectation(description: "MTG Server Response")
 
-        CardDataService.shared.search(for: "lightning bolt") { (error, cards) in
+        RemoteCardService.shared.search(for: "lightning bolt") { (error, cards) in
             defer {
                 exp.fulfill()
             }

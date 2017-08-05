@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36084EBB1F2FEAA10008D04F /* MockCardDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EBA1F2FEAA10008D04F /* MockCardDataService.swift */; };
+		36084EBD1F2FEB1F0008D04F /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EBC1F2FEB1F0008D04F /* CardService.swift */; };
+		36084EC01F2FF6470008D04F /* BaseIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EBF1F2FF6470008D04F /* BaseIntegrationTest.swift */; };
+		36084EC21F2FF6740008D04F /* BaseUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EC11F2FF6740008D04F /* BaseUITest.swift */; };
+		36084EC71F2FF7B00008D04F /* CardSearchUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EC61F2FF7B00008D04F /* CardSearchUITest.swift */; };
 		3666E1D71F2F637A0017A7C3 /* URLSessionPrototypingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */; };
 		36FB15971F1E7B83000E1E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15961F1E7B83000E1E0F /* AppDelegate.swift */; };
-		36FB15991F1E7B83000E1E0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15981F1E7B83000E1E0F /* ViewController.swift */; };
 		36FB159C1F1E7B83000E1E0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FB159A1F1E7B83000E1E0F /* Main.storyboard */; };
 		36FB159E1F1E7B83000E1E0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36FB159D1F1E7B83000E1E0F /* Assets.xcassets */; };
 		36FB15A11F1E7B83000E1E0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FB159F1F1E7B83000E1E0F /* LaunchScreen.storyboard */; };
-		36FB15B81F1E7EFB000E1E0F /* CardDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15B71F1E7EFB000E1E0F /* CardDataService.swift */; };
+		36FB15B81F1E7EFB000E1E0F /* RemoteCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15B71F1E7EFB000E1E0F /* RemoteCardService.swift */; };
 		36FB15BB1F1E816F000E1E0F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15BA1F1E816F000E1E0F /* Card.swift */; };
 		36FB15BE1F1E83B1000E1E0F /* CardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15BD1F1E83B1000E1E0F /* CardTest.swift */; };
 		36FB15C21F1E9067000E1E0F /* CardSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15C11F1E9067000E1E0F /* CardSearchResultTableViewCell.swift */; };
@@ -34,17 +38,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36084EBA1F2FEAA10008D04F /* MockCardDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCardDataService.swift; sourceTree = "<group>"; };
+		36084EBC1F2FEB1F0008D04F /* CardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
+		36084EBF1F2FF6470008D04F /* BaseIntegrationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseIntegrationTest.swift; sourceTree = "<group>"; };
+		36084EC11F2FF6740008D04F /* BaseUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITest.swift; sourceTree = "<group>"; };
+		36084EC61F2FF7B00008D04F /* CardSearchUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchUITest.swift; sourceTree = "<group>"; };
 		3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionPrototypingTest.swift; sourceTree = "<group>"; };
 		36FB15931F1E7B83000E1E0F /* MTG Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTG Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FB15961F1E7B83000E1E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36FB15981F1E7B83000E1E0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		36FB159B1F1E7B83000E1E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36FB159D1F1E7B83000E1E0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36FB15A01F1E7B83000E1E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36FB15A21F1E7B83000E1E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36FB15A71F1E7B83000E1E0F /* MTG CardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MTG CardsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FB15AD1F1E7B83000E1E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36FB15B71F1E7EFB000E1E0F /* CardDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDataService.swift; sourceTree = "<group>"; };
+		36FB15B71F1E7EFB000E1E0F /* RemoteCardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCardService.swift; sourceTree = "<group>"; };
 		36FB15BA1F1E816F000E1E0F /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		36FB15BD1F1E83B1000E1E0F /* CardTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTest.swift; sourceTree = "<group>"; };
 		36FB15C11F1E9067000E1E0F /* CardSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchResultTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,6 +86,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36084EB81F2FEA8A0008D04F /* TestTools */ = {
+			isa = PBXGroup;
+			children = (
+				36084EBE1F2FF6200008D04F /* UITestTools */,
+				36084EB91F2FEA8A0008D04F /* Mocks */,
+			);
+			path = TestTools;
+			sourceTree = "<group>";
+		};
+		36084EB91F2FEA8A0008D04F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				36084EBA1F2FEAA10008D04F /* MockCardDataService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		36084EBE1F2FF6200008D04F /* UITestTools */ = {
+			isa = PBXGroup;
+			children = (
+				36084EBF1F2FF6470008D04F /* BaseIntegrationTest.swift */,
+				36084EC11F2FF6740008D04F /* BaseUITest.swift */,
+			);
+			path = UITestTools;
+			sourceTree = "<group>";
+		};
+		36084EC31F2FF71A0008D04F /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				36084EC61F2FF7B00008D04F /* CardSearchUITest.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
 		3666E1D51F2F63430017A7C3 /* Prototyping */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +155,6 @@
 				36FB15B91F1E8166000E1E0F /* Models */,
 				36FB15B61F1E7B95000E1E0F /* Services */,
 				36FB15961F1E7B83000E1E0F /* AppDelegate.swift */,
-				36FB15981F1E7B83000E1E0F /* ViewController.swift */,
 				36FB159A1F1E7B83000E1E0F /* Main.storyboard */,
 				36FB159D1F1E7B83000E1E0F /* Assets.xcassets */,
 				36FB159F1F1E7B83000E1E0F /* LaunchScreen.storyboard */,
@@ -125,10 +166,12 @@
 		36FB15AA1F1E7B83000E1E0F /* MTG CardsTests */ = {
 			isa = PBXGroup;
 			children = (
-				3666E1D51F2F63430017A7C3 /* Prototyping */,
-				36FB15BC1F1E83A6000E1E0F /* Models */,
-				36FB15C51F1E9431000E1E0F /* Services */,
 				36FB15AD1F1E7B83000E1E0F /* Info.plist */,
+				36FB15BC1F1E83A6000E1E0F /* Models */,
+				3666E1D51F2F63430017A7C3 /* Prototyping */,
+				36FB15C51F1E9431000E1E0F /* Services */,
+				36084EB81F2FEA8A0008D04F /* TestTools */,
+				36084EC31F2FF71A0008D04F /* UITests */,
 			);
 			path = "MTG CardsTests";
 			sourceTree = "<group>";
@@ -136,7 +179,8 @@
 		36FB15B61F1E7B95000E1E0F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				36FB15B71F1E7EFB000E1E0F /* CardDataService.swift */,
+				36FB15B71F1E7EFB000E1E0F /* RemoteCardService.swift */,
+				36084EBC1F2FEB1F0008D04F /* CardService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -404,8 +448,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36FB15B81F1E7EFB000E1E0F /* CardDataService.swift in Sources */,
-				36FB15991F1E7B83000E1E0F /* ViewController.swift in Sources */,
+				36FB15B81F1E7EFB000E1E0F /* RemoteCardService.swift in Sources */,
+				36084EBD1F2FEB1F0008D04F /* CardService.swift in Sources */,
 				36FB15C21F1E9067000E1E0F /* CardSearchResultTableViewCell.swift in Sources */,
 				36FB15971F1E7B83000E1E0F /* AppDelegate.swift in Sources */,
 				36FB15C41F1E91C6000E1E0F /* CardSearchResultTableViewController.swift in Sources */,
@@ -417,9 +461,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36084EC21F2FF6740008D04F /* BaseUITest.swift in Sources */,
 				36FB15C71F1E9451000E1E0F /* CardDataServiceIntegrationTest.swift in Sources */,
 				36FB15BE1F1E83B1000E1E0F /* CardTest.swift in Sources */,
+				36084EC71F2FF7B00008D04F /* CardSearchUITest.swift in Sources */,
+				36084EC01F2FF6470008D04F /* BaseIntegrationTest.swift in Sources */,
 				3666E1D71F2F637A0017A7C3 /* URLSessionPrototypingTest.swift in Sources */,
+				36084EBB1F2FEAA10008D04F /* MockCardDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
