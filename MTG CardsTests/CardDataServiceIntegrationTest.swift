@@ -17,7 +17,7 @@ class CardDataServiceIntegrationTest: XCTestCase {
     func testFetchSingleWord() {
         let exp = expectation(description: "MTG Server Response")
 
-        RemoteCardService.shared.search(for: "Lotus") { (error, cards) in
+        RemoteCardService.shared.search(for: "Lotus") { (error, result) in
             defer {
                 exp.fulfill()
             }
@@ -26,14 +26,20 @@ class CardDataServiceIntegrationTest: XCTestCase {
                 return XCTFail("Failed with error: \(error)")
             }
 
-            guard let cards = cards else {
+            guard let result = result else {
                 return XCTFail("Failed to get any results back")
             }
+
+            let cards = result.sortedKeys
 
             XCTAssertTrue(cards.count > 0, "We didn't get any cards back")
 
             for i in 0..<cards.count {
-                let card = cards[i]
+                let cardName = cards[i]
+                guard let card = result.cards[cardName]?.first else {
+                    XCTFail("Failed to get a card for index \(i)")
+                    continue
+                }
 
                 XCTAssertNotEqual("", card.id)
                 XCTAssertNotEqual("", card.name)
@@ -55,7 +61,7 @@ class CardDataServiceIntegrationTest: XCTestCase {
     func testFetchMultipleWords() {
         let exp = expectation(description: "MTG Server Response")
 
-        RemoteCardService.shared.search(for: "lightning bolt") { (error, cards) in
+        RemoteCardService.shared.search(for: "lightning bolt") { (error, result) in
             defer {
                 exp.fulfill()
             }
@@ -64,14 +70,19 @@ class CardDataServiceIntegrationTest: XCTestCase {
                 return XCTFail("Failed with error: \(error)")
             }
 
-            guard let cards = cards else {
+            guard let result = result else {
                 return XCTFail("Failed to get any results back")
             }
+            let cards = result.sortedKeys
 
             XCTAssertTrue(cards.count > 0, "We didn't get any cards back")
 
             for i in 0..<cards.count {
-                let card = cards[i]
+                let cardName = cards[i]
+                guard let card = result.cards[cardName]?.first else {
+                    XCTFail("Failed to get a card at index \(i)")
+                    continue
+                }
 
                 XCTAssertNotEqual("", card.id)
                 XCTAssertNotEqual("", card.name)

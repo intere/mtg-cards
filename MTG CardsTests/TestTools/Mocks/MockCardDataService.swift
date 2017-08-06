@@ -82,7 +82,7 @@ extension MockCardDataService: CardService {
         }).sorted(by: { return $0.name < $1.name })
 
         DispatchQueue.global(qos: .background).async {
-            callback(nil, results)
+            callback(nil, CardResultSet(withCards: results))
         }
     }
 

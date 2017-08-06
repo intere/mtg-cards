@@ -89,7 +89,10 @@ extension RemoteCardService: CardService {
                     return callback(Constants.invalidFormatError, nil)
                 }
 
-                callback(nil, cardMaps.map({Card(from: $0)}).sorted(by: { return $0.name < $1.name }))
+//                callback(nil, cardMaps.map({Card(from: $0)}).sorted(by: { return $0.name < $1.name }))
+
+                let cards = cardMaps.map { Card(from: $0) }
+                callback(nil,  CardResultSet(withCards: cards))
 
             } catch let error {
                 callback(error, nil)

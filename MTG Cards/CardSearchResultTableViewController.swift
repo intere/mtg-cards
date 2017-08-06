@@ -11,7 +11,7 @@ import UIKit
 class CardSearchResultTableViewController: UITableViewController {
 
     @IBOutlet var searchBar: UISearchBar!
-    var results: [Card]?
+    var results: CardResultSet?
 
     struct Constants {
         static let noResultsCellId = "NoResultsCell"
@@ -38,17 +38,17 @@ class CardSearchResultTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let results = results, results.count > 0 else {
+        guard let results = results, results.cards.count > 0 else {
             return 1
         }
-        return results.count
+        return results.cards.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let results = results else {
             return tableView.dequeueReusableCell(withIdentifier: Constants.enterSearchCellId, for: indexPath)
         }
-        guard results.count > 0 else {
+        guard results.cards.count > 0 else {
             return tableView.dequeueReusableCell(withIdentifier: Constants.noResultsCellId, for: indexPath)
         }
 
@@ -58,7 +58,8 @@ class CardSearchResultTableViewController: UITableViewController {
             return cell
         }
         cardCell.delegate = self
-        cardCell.card = results[indexPath.row]
+        let cardName = results.sortedKeys[indexPath.row]
+        cardCell.card = results.cards[cardName]?.first
 
         return cardCell
     }
@@ -103,12 +104,12 @@ extension CardSearchResultTableViewController: CardImageLoadedDelegate {
 extension CardSearchResultTableViewController {
 
     func indexOf(card: Card) -> IndexPath? {
-        guard let cards = results else {
+        guard let sortedKeys = results?.sortedKeys else {
             return nil
         }
 
-        for i in 0..<cards.count {
-            guard cards[i].id == card.id else {
+        for i in 0..<sortedKeys.count {
+            guard sortedKeys[i] == card.name else {
                 continue
             }
             return IndexPath(row: i, section: 0)
