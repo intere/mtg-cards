@@ -14,6 +14,7 @@
 		36084EC71F2FF7B00008D04F /* CardSearchUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EC61F2FF7B00008D04F /* CardSearchUITest.swift */; };
 		3666E1D71F2F637A0017A7C3 /* URLSessionPrototypingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */; };
 		369BDEDD1F37D9F900AB3CB3 /* CardResultSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369BDEDC1F37D9F900AB3CB3 /* CardResultSet.swift */; };
+		369BDEE11F37E3CA00AB3CB3 /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369BDEE01F37E3CA00AB3CB3 /* CardImageView.swift */; };
 		36FB15971F1E7B83000E1E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB15961F1E7B83000E1E0F /* AppDelegate.swift */; };
 		36FB159C1F1E7B83000E1E0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FB159A1F1E7B83000E1E0F /* Main.storyboard */; };
 		36FB159E1F1E7B83000E1E0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36FB159D1F1E7B83000E1E0F /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		36084EC61F2FF7B00008D04F /* CardSearchUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchUITest.swift; sourceTree = "<group>"; };
 		3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionPrototypingTest.swift; sourceTree = "<group>"; };
 		369BDEDC1F37D9F900AB3CB3 /* CardResultSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardResultSet.swift; sourceTree = "<group>"; };
+		369BDEE01F37E3CA00AB3CB3 /* CardImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 		36FB15931F1E7B83000E1E0F /* MTG Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTG Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FB15961F1E7B83000E1E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36FB159B1F1E7B83000E1E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 			name = Prototyping;
 			sourceTree = "<group>";
 		};
+		369BDEDF1F37E3B800AB3CB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				369BDEE01F37E3CA00AB3CB3 /* CardImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		36FB158A1F1E7B83000E1E0F = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		36FB15951F1E7B83000E1E0F /* MTG Cards */ = {
 			isa = PBXGroup;
 			children = (
+				369BDEDF1F37E3B800AB3CB3 /* Views */,
 				36FB15BF1F1E903C000E1E0F /* Controllers */,
 				36FB15B91F1E8166000E1E0F /* Models */,
 				36FB15B61F1E7B95000E1E0F /* Services */,
@@ -457,6 +468,7 @@
 				36FB15971F1E7B83000E1E0F /* AppDelegate.swift in Sources */,
 				36FB15C41F1E91C6000E1E0F /* CardSearchResultTableViewController.swift in Sources */,
 				36FB15BB1F1E816F000E1E0F /* Card.swift in Sources */,
+				369BDEE11F37E3CA00AB3CB3 /* CardImageView.swift in Sources */,
 				369BDEDD1F37D9F900AB3CB3 /* CardResultSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
