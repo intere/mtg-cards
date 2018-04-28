@@ -11,7 +11,8 @@ import XCTest
 
 
 /// This is an integration test, becuse it actaully reaches out to the "Real API" to execute a query
-/// This is a good test that serves as documentation to show us how to use the RemoteCardService 
+/// This is a good test that serves as documentation to show us how to use the RemoteCardService
+///
 class CardDataServiceIntegrationTest: XCTestCase {
 
     func testFetchSingleWord() {
