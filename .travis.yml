@@ -1,0 +1,13 @@
+# references:
+# * http://www.objc.io/issue-6/travis-ci.html
+# * https://github.com/supermarin/xcpretty#usage
+
+osx_image: xcode9.3
+language: objective-c
+# cache: cocoapods
+# podfile: Example/Podfile
+before_install:
+  - bundle update
+script:
+  - bundle exec fastlane test
+#- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace "MTG Cards.xcworkspace" -scheme "MTG Cards" -sdk iphonesimulator11.3 ONLY_ACTIVE_ARCH=NO | xcpretty
