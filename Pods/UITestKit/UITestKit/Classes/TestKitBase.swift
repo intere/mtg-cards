@@ -1,29 +1,20 @@
 //
-//  BaseIntegrationTest.swift
-//  MTG Cards
+//  TestKitBase.swift
+//  UITestKit
 //
-//  Created by Eric Internicola on 7/31/17.
-//  Copyright © 2017 Eric Internicola. All rights reserved.
+//  Created by Eric Internicola on 11/5/17.
 //
 
 import XCTest
 
-class BaseIntegrationTest: XCTestCase {
-
-    override func setUp() {
-        super.setUp()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-    }
-
+/// A Base Class that provides some very basic functions for sleeping arbitrarily and waiting for a specific condition to occur (or timing out if that doesn't happen)
+open class TestKitBase: XCTestCase {
 
     /// Waits for the desired amount of time (and frees up the UI thread while it waits)
     ///
     /// - Parameter timeout: The length of time to wait for
-    func waitForDuration(_ timeout: TimeInterval) {
-        waitForCondition({return false}, timeout: timeout)
+    public func waitForDuration(_ timeout: TimeInterval) {
+        waitForCondition({ false }, timeout: timeout)
     }
 
     /// Waits for the provided condition block to evaluate to true, or the timeout amount of time to elapse.
@@ -33,7 +24,7 @@ class BaseIntegrationTest: XCTestCase {
     ///   - timeout: The length of time to stop querying the block and just return false.
     /// - Returns: True if the block evaluated truthy in the allotted time, false otherwise.
     @discardableResult
-    func waitForCondition(_ condition: (Void) -> Bool, timeout: TimeInterval) -> Bool {
+    public func waitForCondition(_ condition: () -> Bool, timeout: TimeInterval) -> Bool {
         var done = false
         let startTime = NSDate()
         while !done {
@@ -50,5 +41,5 @@ class BaseIntegrationTest: XCTestCase {
         }
         return true
     }
-    
+
 }

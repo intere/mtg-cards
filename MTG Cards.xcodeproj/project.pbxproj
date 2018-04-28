@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		36084EBB1F2FEAA10008D04F /* MockCardDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EBA1F2FEAA10008D04F /* MockCardDataService.swift */; };
 		36084EBD1F2FEB1F0008D04F /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EBC1F2FEB1F0008D04F /* CardService.swift */; };
-		36084EC01F2FF6470008D04F /* BaseIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EBF1F2FF6470008D04F /* BaseIntegrationTest.swift */; };
 		36084EC21F2FF6740008D04F /* BaseUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EC11F2FF6740008D04F /* BaseUITest.swift */; };
 		36084EC71F2FF7B00008D04F /* CardSearchUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EC61F2FF7B00008D04F /* CardSearchUITest.swift */; };
 		3666E1D71F2F637A0017A7C3 /* URLSessionPrototypingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		36084EBA1F2FEAA10008D04F /* MockCardDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCardDataService.swift; sourceTree = "<group>"; };
 		36084EBC1F2FEB1F0008D04F /* CardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
-		36084EBF1F2FF6470008D04F /* BaseIntegrationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseIntegrationTest.swift; sourceTree = "<group>"; };
 		36084EC11F2FF6740008D04F /* BaseUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITest.swift; sourceTree = "<group>"; };
 		36084EC61F2FF7B00008D04F /* CardSearchUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchUITest.swift; sourceTree = "<group>"; };
 		3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionPrototypingTest.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 		36084EBE1F2FF6200008D04F /* UITestTools */ = {
 			isa = PBXGroup;
 			children = (
-				36084EBF1F2FF6470008D04F /* BaseIntegrationTest.swift */,
 				36084EC11F2FF6740008D04F /* BaseUITest.swift */,
 			);
 			path = UITestTools;
@@ -302,10 +299,12 @@
 				TargetAttributes = {
 					36FB15921F1E7B83000E1E0F = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 					36FB15A61F1E7B83000E1E0F = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 36FB15921F1E7B83000E1E0F;
 					};
@@ -465,7 +464,6 @@
 				36FB15C71F1E9451000E1E0F /* CardDataServiceIntegrationTest.swift in Sources */,
 				36FB15BE1F1E83B1000E1E0F /* CardTest.swift in Sources */,
 				36084EC71F2FF7B00008D04F /* CardSearchUITest.swift in Sources */,
-				36084EC01F2FF6470008D04F /* BaseIntegrationTest.swift in Sources */,
 				3666E1D71F2F637A0017A7C3 /* URLSessionPrototypingTest.swift in Sources */,
 				36084EBB1F2FEAA10008D04F /* MockCardDataService.swift in Sources */,
 			);
@@ -605,7 +603,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intere.MTG-Cards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -618,7 +617,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intere.MTG-Cards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -632,7 +632,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intere.MTG-CardsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTG Cards.app/MTG Cards";
 			};
 			name = Debug;
@@ -647,7 +648,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intere.MTG-CardsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTG Cards.app/MTG Cards";
 			};
 			name = Release;
