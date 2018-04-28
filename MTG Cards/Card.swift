@@ -12,8 +12,14 @@ import Foundation
 /// This class represents the metadata about a Magic Card
 ///
 class Card {
+
+    /// The card id (unique identifier about the card)
     let id: String
+
+    /// The name of the card (e.g. Black Lotus)
     let name: String
+
+    /// The mana cost of the card
     let manaCost: String
     let cmc: Int
     let colors: [String]

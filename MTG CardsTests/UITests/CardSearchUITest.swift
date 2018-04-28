@@ -98,6 +98,8 @@ extension CardSearchUITest {
             return self.cardSearchVC?.tableView.numberOfRows(inSection: 0) ?? 0 > 0
         }, timeout: 1), "We didn't load any results")
 
+        waitForDuration(1)
+
         // Ensure we have 1 row
         XCTAssertEqual(1, cardSearchVC.tableView.numberOfRows(inSection: 0))
         XCTAssertTrue(cardSearchVC.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) is CardSearchResultTableViewCell)
@@ -118,17 +120,25 @@ extension CardSearchUITest {
 
         // Wait for there to be more than a single row
         XCTAssertTrue(waitForCondition({
-            return self.cardSearchVC?.tableView.numberOfRows(inSection: 0) ?? 0 > 0
+            self.cardSearchVC?.tableView.numberOfRows(inSection: 0) ?? 0 > 0
         }, timeout: 1), "We didn't load any results")
+
+        waitForCondition({
+            cardSearchVC.tableView.numberOfRows(inSection: 0) == 5
+        }, timeout: 5)
 
         // Ensure we have 1 row
         XCTAssertEqual(5, cardSearchVC.tableView.numberOfRows(inSection: 0))
 
         for i in 0..<5 {
             let indexPath = IndexPath(row: i, section: 0)
-            cardSearchVC.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
-            XCTAssertTrue(cardSearchVC.tableView.cellForRow(at: indexPath) is CardSearchResultTableViewCell)
-            waitForDuration(1)
+            cardSearchVC.tableView.scrollToRow(at: indexPath, at: .middle, animated: false)
+            waitForDuration(0.1)
+            let cell = cardSearchVC.tableView.cellForRow(at: indexPath)
+            waitForCondition({
+                cell is CardSearchResultTableViewCell
+            }, timeout: 3)
+            XCTAssertTrue(cell is CardSearchResultTableViewCell, "Cell at index \(i) wasn't the right type, it was \(String(describing: cell?.classForCoder))")
         }
     }
 
@@ -163,7 +173,7 @@ extension CardSearchUITest {
 
         XCTAssertEqual(2, self.cardSearchVC?.tableView.numberOfRows(inSection: 0))
         waitForDuration(0.5)
-        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 1, section: 0), at: .middle, animated: true)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 1, section: 0), at: .middle, animated: false)
         waitForDuration(1)
 
         searchTerm = "R"
@@ -177,17 +187,17 @@ extension CardSearchUITest {
 
         XCTAssertEqual(15, self.cardSearchVC?.tableView.numberOfRows(inSection: 0))
 
-        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 1, section: 0), at: .bottom, animated: true)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 1, section: 0), at: .bottom, animated: false)
         waitForDuration(1)
-        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 3, section: 0), at: .bottom, animated: true)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 3, section: 0), at: .bottom, animated: false)
         waitForDuration(1)
-        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 5, section: 0), at: .bottom, animated: true)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 5, section: 0), at: .bottom, animated: false)
         waitForDuration(1)
-        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 7, section: 0), at: .bottom, animated: true)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 7, section: 0), at: .bottom, animated: false)
         waitForDuration(1)
-        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 9, section: 0), at: .bottom, animated: true)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 9, section: 0), at: .bottom, animated: false)
         waitForDuration(1)
-        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 13, section: 0), at: .bottom, animated: true)
+        cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 13, section: 0), at: .bottom, animated: false)
         waitForDuration(2)
     }
 }

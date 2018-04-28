@@ -9,6 +9,7 @@
 import Kingfisher
 import UIKit
 
+/// Protocol to be notified when an image was loaded for a card
 protocol CardImageLoadedDelegate: class {
 
     /// Tells the delegate that the cell's image has loaded
@@ -17,6 +18,9 @@ protocol CardImageLoadedDelegate: class {
     func imageLoaded(for card: Card)
 }
 
+
+/// A Search Result Cell:
+/// contains the card name and associated image
 class CardSearchResultTableViewCell: UITableViewCell {
 
     struct Constants {
@@ -27,18 +31,18 @@ class CardSearchResultTableViewCell: UITableViewCell {
     @IBOutlet var cardImageView: UIImageView!
     var delegate: CardImageLoadedDelegate?
 
+    /// The card that this cell is currently showing.
+    /// When you set the card, the cell is updated.
+    /// Note: This must be done on the UI Thread.
     var card: Card? {
         didSet {
             updateCell()
         }
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    override func prepareForReuse() {
+        cardNameLabel.text = nil
+        cardImageView.image = nil
     }
 
 }
@@ -47,10 +51,12 @@ class CardSearchResultTableViewCell: UITableViewCell {
 
 extension CardSearchResultTableViewCell {
 
+    /// Updates the UI to reflect the current card:
+    /// 1. Updates the label to reflect the card name
+    /// 2. Uses Kingfisher to set the image for the cell
+    ///
     func updateCell() {
         guard let card = card else {
-            cardNameLabel.text = ""
-            cardImageView.kf.setImage(with: nil)
             return
         }
 

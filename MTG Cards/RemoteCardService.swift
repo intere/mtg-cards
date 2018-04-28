@@ -21,28 +21,37 @@ class RemoteCardService {
     struct Constants {
         static let baseURL = "https://api.magicthegathering.io/v1/cards"
         static let cardNameParameter = "name"
+        static let domain = "MTG Card Search"
 
+        /// Error that the URL failed to be created correctly
         static let urlCreationError: Error = {
-            return NSError(domain: "MTG Card Search", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to create a search URL"])
+            return NSError(domain: Constants.domain, code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to create a search URL"])
 
         }()
 
+        /// Error that there is no data
         static let noDataError: Error = {
-            return NSError(domain: "MTG Card Search", code: 2, userInfo: [NSLocalizedDescriptionKey: "The server responded back without any data"])
+            return NSError(domain: Constants.domain, code: 2, userInfo: [NSLocalizedDescriptionKey: "The server responded back without any data"])
         }()
+
+        /// Failed to parse the response from the server
         static let internalError: Error = {
-            return NSError(domain: "MTG Card Search", code: 3, userInfo: [NSLocalizedDescriptionKey: "Application Error trying to parse server response"])
+            return NSError(domain: Constants.domain, code: 3, userInfo: [NSLocalizedDescriptionKey: "Application Error trying to parse server response"])
         }()
+        /// The server responded back with an error
         static let non200Error: Error = {
-            return NSError(domain: "MTG Card Search", code: 4, userInfo: [NSLocalizedDescriptionKey: "The server responded back with a non-success response"])
+            return NSError(domain: Constants.domain, code: 4, userInfo: [NSLocalizedDescriptionKey: "The server responded back with a non-success response"])
         }()
+        /// The server responded back with an unexpected data format
         static let invalidFormatError: Error = {
-            return NSError(domain: "MTG Card Search", code: 5, userInfo: [NSLocalizedDescriptionKey: "The server returned data in an unexpected format"])
+            return NSError(domain: Constants.domain, code: 5, userInfo: [NSLocalizedDescriptionKey: "The server returned data in an unexpected format"])
         }()
 
     }
 
 }
+
+// MARK: - CardService Implementation
 
 extension RemoteCardService: CardService {
 
@@ -102,7 +111,7 @@ extension RemoteCardService: CardService {
 
 // MARK: - Implementation
 
-extension RemoteCardService {
+private extension RemoteCardService {
 
     func searchURL(for cardNamed: String) -> URL? {
         guard let components = NSURLComponents(string: Constants.baseURL) else {

@@ -8,15 +8,18 @@
 
 import UIKit
 
+/// The TableView for the Card Search Results
 class CardSearchResultTableViewController: UITableViewController {
 
+    /// The Search Bar reference
     @IBOutlet var searchBar: UISearchBar!
+
+    /// The results that we got back from the API
     var results: [Card]?
 
     struct Constants {
         static let noResultsCellId = "NoResultsCell"
         static let enterSearchCellId = "EnterSearchCell"
-
     }
 
     override func viewDidLoad() {
@@ -27,11 +30,12 @@ class CardSearchResultTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+}
 
-    // MARK: - Table view data source
+// MARK: - Table view data source
+
+
+extension CardSearchResultTableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -102,28 +106,38 @@ extension CardSearchResultTableViewController: CardImageLoadedDelegate {
 
 extension CardSearchResultTableViewController {
 
+    /// Gets you the card at the provided index.
+    ///
+    /// - Parameter card: The card that you want the index of.
+    /// - Returns: The index of that card (as an IndexPath) or nil if it's not found.
     func indexOf(card: Card) -> IndexPath? {
         guard let cards = results else {
             return nil
         }
 
-        for i in 0..<cards.count {
-            guard cards[i].id == card.id else {
-                continue
-            }
+        for i in 0..<cards.count where cards[i].id == card.id {
             return IndexPath(row: i, section: 0)
         }
         
         return nil
     }
 
-    func search(for cardNamed: String) {
-        RemoteCardService.shared.search(for: cardNamed) { (error, cards) in
+    /// Searches for magic cards that match the provided card name (substring).
+    /// The matching is based on substring matching.  For example, a search for "Amber"
+    /// returns a number of results:
+    /// - Amber Prison
+    /// - Chamber of Manipulation
+    /// - Chambered Nautilus
+    /// - etc
+    ///
+    /// - Parameter searchTerm: Some string that you want to search cards for matches by name.
+    func search(for searchTerm: String) {
+        RemoteCardService.shared.search(for: searchTerm) { (error, cards) in
             if let error = error {
-                return print("ERROR searching for card \(cardNamed): \(error)")
+                return print("ERROR searching for card \(searchTerm): \(error)")
             }
             guard let cards = cards else {
-                return print("ERROR, no cards returned searching for \(cardNamed)")
+                return print("ERROR, no cards returned searching for \(searchTerm)")
             }
             self.results = cards
             DispatchQueue.main.async {

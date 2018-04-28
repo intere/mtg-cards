@@ -9,8 +9,38 @@
 @testable import MTG_Cards
 import Foundation
 
+/// A mock Card service implementation
+/// This mock is a stand in, so that we don't have to call out to an API that
+/// could be down, or the API could change or some other issue could happen
+///
+/// ### Happy Path Usage:
+/// ```
+/// // Inject the mock framework
+/// MockCardDataService.beginMocking()
+/// MockCardDataService.mockInstance.errorResult = nil // this is the default
+/// RemoteCardService.shared.search(for: searchTerm) { (error, cards) in
+///   XCTAssertNil(error)
+///   XCTAssertNotNil(cards)
+/// }
+/// ```
+/// ### Error Path Usage:
+/// ```
+/// // Inject the mock framework
+/// MockCardDataService.beginMocking()
+/// MockCardDataService.mockInstance.errorResult = someError
+/// RemoteCardService.shared.search(for: searchTerm) { (error, cards) in
+///   XCTAssertEqual(someError)
+///   XCTAssertNil(cards)
+/// }
+/// ```
+///
+///
 class MockCardDataService {
+
     struct Constants {
+
+        /// The Mock Card Database, let's make this fun!
+        /// These are all fake cards :)
         static let mockCards = [
             Card(name: "DeadPool, fairy princess", imageUrlString: "https://s-media-cache-ak0.pinimg.com/564x/f3/d5/93/f3d593cbfdc378555d0537ad1fc20332.jpg"),
             Card(name: "Dredge Pirate Roberts", imageUrlString: "https://i.pinimg.com/564x/26/1f/2a/261f2a99d76f9218352238f294400bf5.jpg"),
@@ -36,9 +66,13 @@ class MockCardDataService {
         ]
     }
 
+    /// Optional reference to the real service so it can be swapped in / out later
     static var realService: CardService?
+
+    /// The single instance of the mock card database
     static var mockInstance = MockCardDataService()
 
+    /// If you want the mock service to respond with an error, set this value before making an API call
     var errorResult: Error?
 
     /// Begins mocking by injecting the mock instance into the RemoteCardService singleton
@@ -67,20 +101,30 @@ class MockCardDataService {
 
 extension MockCardDataService: CardService {
 
-    func search(for cardNamed: String, callback: @escaping CardSearchCallback) {
+    /// The Mock Search implementation:
+    /// If the errorResult property is set, then this call will call back with an error.
+    /// If the errorResult property is not set, then we "search" the mock cards and
+    /// respond back with the results from that set.
+    ///
+    /// - Parameters:
+    ///   - searchTerm: What you want to search card names for.
+    ///   - callback: A CardSearchCallback block that will handle a response
+    func search(for searchTerm: String, callback: @escaping CardSearchCallback) {
 
         // Callback wtih an error if that's what we're supposed to do
         if let errorResult = errorResult {
-            return DispatchQueue.global(qos: .background).async {
+            DispatchQueue.global(qos: .background).async {
                 callback(errorResult, nil)
             }
-
+            return
         }
 
-        let results = Constants.mockCards.filter({ (card) -> Bool in
-            return card.name.lowercased().contains(cardNamed.lowercased())
-        }).sorted(by: { return $0.name < $1.name })
+        // Otherwise, perform an actual search of our mock card database:
+        let results = Constants.mockCards.filter { (card) -> Bool in
+            return card.name.lowercased().contains(searchTerm.lowercased())
+        }.sorted { return $0.name < $1.name }
 
+        // Now call back on a background thread to simulate what the real service would behave like:
         DispatchQueue.global(qos: .background).async {
             callback(nil, results)
         }
@@ -88,9 +132,9 @@ extension MockCardDataService: CardService {
 
 }
 
-// MARK: - Card Extension
+// MARK: - Convenience initializer for Cards
 
-extension Card {
+private extension Card {
 
     convenience init(name: String, imageUrlString: String) {
         self.init(from: ["name": name, "imageUrl": imageUrlString])

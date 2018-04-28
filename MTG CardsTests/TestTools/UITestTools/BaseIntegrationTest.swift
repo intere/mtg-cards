@@ -33,7 +33,7 @@ class BaseIntegrationTest: XCTestCase {
     ///   - timeout: The length of time to stop querying the block and just return false.
     /// - Returns: True if the block evaluated truthy in the allotted time, false otherwise.
     @discardableResult
-    func waitForCondition(_ condition: (Void) -> Bool, timeout: TimeInterval) -> Bool {
+    func waitForCondition(_ condition: () -> Bool, timeout: TimeInterval) -> Bool {
         var done = false
         let startTime = NSDate()
         while !done {
