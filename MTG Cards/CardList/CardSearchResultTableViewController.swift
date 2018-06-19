@@ -30,6 +30,11 @@ class CardSearchResultTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
 }
 
 // MARK: - Table view data source
@@ -67,6 +72,24 @@ extension CardSearchResultTableViewController {
         return cardCell
     }
 
+}
+
+// MARK: - Navigation
+
+extension CardSearchResultTableViewController {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LoadCardSegue" {
+            guard let cardVC = segue.destination as? CardInfoTableViewController else {
+                return assertionFailure("Failed to get the right kind of VC")
+            }
+            guard let cardCell = sender as? CardSearchResultTableViewCell else {
+                return assertionFailure("Failed to get the sender as a card cell")
+            }
+
+            cardVC.cardInfo = cardCell.card
+        }
+    }
 }
 
 // MARK: - UISearchBarDelegate

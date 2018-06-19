@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9kJ-WC-4BL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="32p-oR-UJ3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cSi-oR-Z7R">
+            <objects>
+                <navigationController id="32p-oR-UJ3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dtk-Bw-Tmc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9kJ-WC-4BL" kind="relationship" relationship="rootViewController" id="D3I-Yh-wOY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPH-EF-1oq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-846" y="906"/>
+        </scene>
         <!--Card Search Result Table View Controller-->
         <scene sceneID="sLO-BY-Myf">
             <objects>
@@ -47,13 +63,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juggernaut" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gv-0i-tT6">
-                                            <rect key="frame" x="8" y="8" width="359" height="20"/>
+                                            <rect key="frame" x="16" y="11" width="343" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kde-H8-JxW">
-                                            <rect key="frame" x="8" y="36" width="359" height="356"/>
+                                            <rect key="frame" x="8" y="38.5" width="359" height="353.5"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -69,6 +85,7 @@
                                 <connections>
                                     <outlet property="cardImageView" destination="kde-H8-JxW" id="qPd-Oa-dsz"/>
                                     <outlet property="cardNameLabel" destination="2Gv-0i-tT6" id="36A-IX-ZU0"/>
+                                    <segue destination="327-6x-4qW" kind="show" identifier="LoadCardSegue" id="KXQ-27-amP"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoResultsCell" id="b8h-4c-7TJ">
@@ -79,7 +96,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, there are no results that matched your criteria." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJr-1T-Osx">
-                                            <rect key="frame" x="8" y="11" width="359" height="22"/>
+                                            <rect key="frame" x="16" y="14" width="343" height="16"/>
                                             <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -101,7 +118,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a search above to find some cards." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDN-I5-eWp">
-                                            <rect key="frame" x="8" y="11" width="359" height="22"/>
+                                            <rect key="frame" x="16" y="14" width="343" height="16"/>
                                             <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -121,6 +138,7 @@
                             <outlet property="delegate" destination="9kJ-WC-4BL" id="qHT-pq-IxJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="gSD-f6-snj"/>
                     <connections>
                         <outlet property="searchBar" destination="9yt-xL-thG" id="mEC-ZZ-kjn"/>
                     </connections>
@@ -128,6 +146,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQs-BQ-h1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="906.29685157421295"/>
+        </scene>
+        <!--CardInfo-->
+        <scene sceneID="rbb-Qa-d1K">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CardInfo" id="327-6x-4qW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1k-UQ-MHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="906"/>
         </scene>
     </scenes>
 </document>
