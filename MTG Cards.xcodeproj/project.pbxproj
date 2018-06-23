@@ -11,6 +11,7 @@
 		36084EC21F2FF6740008D04F /* BaseUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EC11F2FF6740008D04F /* BaseUITest.swift */; };
 		36084EC71F2FF7B00008D04F /* CardSearchUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EC61F2FF7B00008D04F /* CardSearchUITest.swift */; };
 		3625F18020DE8E3100CA7EEC /* Card+AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625F17F20DE8E3100CA7EEC /* Card+AttributedText.swift */; };
+		3625F18220DE942200CA7EEC /* Card+Spotlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625F18120DE942200CA7EEC /* Card+Spotlight.swift */; };
 		3666E1D71F2F637A0017A7C3 /* URLSessionPrototypingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */; };
 		36C4BADD20D44D7100978246 /* CardSearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4BAD620D44D7000978246 /* CardSearchResultTableViewController.swift */; };
 		36C4BADE20D44D7100978246 /* CardSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4BAD720D44D7000978246 /* CardSearchResultTableViewCell.swift */; };
@@ -46,6 +47,7 @@
 		36084EC11F2FF6740008D04F /* BaseUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITest.swift; sourceTree = "<group>"; };
 		36084EC61F2FF7B00008D04F /* CardSearchUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchUITest.swift; sourceTree = "<group>"; };
 		3625F17F20DE8E3100CA7EEC /* Card+AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+AttributedText.swift"; sourceTree = "<group>"; };
+		3625F18120DE942200CA7EEC /* Card+Spotlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+Spotlight.swift"; sourceTree = "<group>"; };
 		3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionPrototypingTest.swift; sourceTree = "<group>"; };
 		36C4BAD620D44D7000978246 /* CardSearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchResultTableViewController.swift; sourceTree = "<group>"; };
 		36C4BAD720D44D7000978246 /* CardSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchResultTableViewCell.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				36C4BAD920D44D7100978246 /* Card.swift */,
+				3625F18120DE942200CA7EEC /* Card+Spotlight.swift */,
 				3625F17F20DE8E3100CA7EEC /* Card+AttributedText.swift */,
 			);
 			path = Models;
@@ -314,6 +317,7 @@
 				TargetAttributes = {
 					36FB15921F1E7B83000E1E0F = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 268S5GJFWZ;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
@@ -469,6 +473,7 @@
 				36C4BAE020D44D7100978246 /* CardService.swift in Sources */,
 				36C4BAEA20D45F6F00978246 /* CardInfoTableViewController.swift in Sources */,
 				36FB15971F1E7B83000E1E0F /* AppDelegate.swift in Sources */,
+				3625F18220DE942200CA7EEC /* Card+Spotlight.swift in Sources */,
 				36C4BAE120D44D7100978246 /* RemoteCardService.swift in Sources */,
 				36C4BADE20D44D7100978246 /* CardSearchResultTableViewCell.swift in Sources */,
 				36C4BAEC20D46B8F00978246 /* CardImageCell.swift in Sources */,
@@ -611,7 +616,7 @@
 			baseConfigurationReference = 52959FBBFAF1E14844257618 /* Pods-MTG Cards.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 268S5GJFWZ;
 				INFOPLIST_FILE = "MTG Cards/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intere.MTG-Cards";
@@ -626,7 +631,7 @@
 			baseConfigurationReference = E574712195D7231A8B452DB8 /* Pods-MTG Cards.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 268S5GJFWZ;
 				INFOPLIST_FILE = "MTG Cards/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.intere.MTG-Cards";

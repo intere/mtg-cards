@@ -29,6 +29,18 @@ extension CardImageCell {
             cardImage.image = nil
             return
         }
-        cardImage.kf.setImage(with: url)
+
+        // Index the card in spotlight after the image is loaded:
+        cardImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, url) in
+            if let error = error {
+                print("Error loading image: \(error.localizedDescription)")
+                return
+            }
+            guard let image = image else {
+                print("No image data was loaded for card: \(cardInfo.name)")
+                return
+            }
+            cardInfo.spotlightIndex(using: image)
+        }
     }
 }
