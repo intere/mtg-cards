@@ -22,11 +22,26 @@ class CardInfoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = UITableViewAutomaticDimension
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: Notification.CardInfoTableViewController.updateTable, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
+    override func restoreUserActivityState(_ activity: NSUserActivity) {
+        handle(userActivity: activity)
+    }
+
+    static func loadFromStoryboard() -> CardInfoTableViewController {
+        return UIStoryboard(name: "CardInfo", bundle: nil).instantiateInitialViewController()
+            as! CardInfoTableViewController
+    }
+
+    @objc
+    func reloadData() {
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -63,4 +78,12 @@ class CardInfoTableViewController: UITableViewController {
 
     }
 
+}
+
+
+extension Notification {
+
+    struct CardInfoTableViewController {
+        static let updateTable = Notification.Name(rawValue: "UpdateCardInfoTableViewController")
+    }
 }

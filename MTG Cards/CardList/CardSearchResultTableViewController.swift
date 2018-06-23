@@ -35,6 +35,9 @@ class CardSearchResultTableViewController: UITableViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
+    override func restoreUserActivityState(_ activity: NSUserActivity) {
+        handle(userActivity: activity)
+    }
 }
 
 // MARK: - Table view data source

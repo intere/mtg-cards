@@ -41,6 +41,10 @@ extension CardImageCell {
                 return
             }
             cardInfo.spotlightIndex(using: image)
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(Notification(name:
+                    Notification.CardInfoTableViewController.updateTable))
+            }
         }
     }
 }

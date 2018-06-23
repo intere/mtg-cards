@@ -55,6 +55,40 @@ class RemoteCardService {
 
 extension RemoteCardService: CardService {
 
+    func openCard(withIdentifier identifier: String, callback: @escaping CardResultCallback) {
+        guard let url = cardUrl(id: identifier) else {
+            return callback(Constants.urlCreationError, nil)
+        }
+
+        getUrl(url) { (error, data) in
+            if let error = error {
+                return callback(error, nil)
+            }
+
+            // Make sure there is data
+            guard let data = data else {
+                return callback(Constants.noDataError, nil)
+            }
+
+            do {
+                // Make sure we can parse the data
+                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] else {
+                    return callback(Constants.invalidFormatError, nil)
+                }
+
+                guard let cardMap = json["card"] as? [String : AnyObject] else {
+                    return callback(Constants.invalidFormatError, nil)
+                }
+
+                callback(nil, Card(from: cardMap))
+
+            } catch let error {
+                callback(error, nil)
+            }
+
+        }
+    }
+
     /// Searches the API for a specific card and calls back with success or failure
     ///
     /// - Parameters:
@@ -65,7 +99,51 @@ extension RemoteCardService: CardService {
             return callback(Constants.urlCreationError, nil)
         }
 
+        getUrl(url) { (error, data) in
+            if let error = error {
+                return callback(error, nil)
+            }
 
+            // Make sure there is data
+            guard let data = data else {
+                return callback(Constants.noDataError, nil)
+            }
+
+            do {
+                // Make sure we can parse the data
+                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] else {
+                    return callback(Constants.invalidFormatError, nil)
+                }
+
+                guard let cardMaps = json["cards"] as? [[String : AnyObject]] else {
+                    return callback(Constants.invalidFormatError, nil)
+                }
+
+                callback(nil, cardMaps.map({Card(from: $0)}).sorted(by: { return $0.name < $1.name }))
+                
+            } catch let error {
+                callback(error, nil)
+            }
+
+        }
+
+    }
+
+}
+
+// MARK: - Implementation
+
+private extension RemoteCardService {
+
+    typealias RemoteResult = (Error?, Data?) -> Void
+
+    /// Helper function that performs a GET on the provided URL and calls back with either an error, or Data.
+    ///
+    /// - Parameters:
+    ///   - url: The URL that you want to do an HTTP GET with.
+    ///   - callback: The callback that will provide you with an error or data.
+    func getUrl(_ url: URL, callback: @escaping RemoteResult) {
+        print("Requesting URL: \(url.absoluteString)")
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             // Make sure there's no error
             if let error = error {
@@ -88,31 +166,22 @@ extension RemoteCardService: CardService {
                 return callback(Constants.non200Error, nil)
             }
 
-            do {
-                // Make sure we can parse the data
-                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] else {
-                    return callback(Constants.invalidFormatError, nil)
-                }
-
-                guard let cardMaps = json["cards"] as? [[String : AnyObject]] else {
-                    return callback(Constants.invalidFormatError, nil)
-                }
-
-                callback(nil, cardMaps.map({Card(from: $0)}).sorted(by: { return $0.name < $1.name }))
-
-            } catch let error {
-                callback(error, nil)
-            }
+            callback(error, data)
         }.resume()
-
     }
 
-}
+    /// Builds a URL for a specific card using the provided id.
+    ///
+    /// - Parameter id: The ID of the card you would like the card URL for
+    /// - Returns: The ID of the card you want back.
+    func cardUrl(id: String) -> URL? {
+        return URL(string: Constants.baseURL + "/" + id)
+    }
 
-// MARK: - Implementation
-
-private extension RemoteCardService {
-
+    /// Builds you a Search URL for the provided card name.
+    ///
+    /// - Parameter cardNamed: The card name you want to search for.
+    /// - Returns: A URL that will search
     func searchURL(for cardNamed: String) -> URL? {
         guard let components = NSURLComponents(string: Constants.baseURL) else {
             return nil

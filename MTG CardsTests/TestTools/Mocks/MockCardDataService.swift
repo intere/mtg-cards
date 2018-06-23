@@ -101,6 +101,10 @@ class MockCardDataService {
 
 extension MockCardDataService: CardService {
 
+    func openCard(withIdentifier identifier: String, callback: @escaping CardResultCallback) {
+        // TODO: Implement me
+    }
+
     /// The Mock Search implementation:
     /// If the errorResult property is set, then this call will call back with an error.
     /// If the errorResult property is not set, then we "search" the mock cards and
