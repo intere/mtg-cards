@@ -25,7 +25,7 @@ class CardTitleCell: UITableViewCell {
 extension CardTitleCell {
 
     func updateCardTitle() {
-        titleLabel.text = cardInfo?.name
+        titleLabel.attributedText = cardInfo?.cardSetAndName(for: titleLabel)
     }
 
 }

@@ -11,7 +11,7 @@ import Foundation
 
 /// This class represents the metadata about a Magic Card
 ///
-class Card: CustomDebugStringConvertible {
+class Card: CustomDebugStringConvertible, Equatable {
 
     /// The card id (unique identifier about the card)
     let id: String
@@ -52,6 +52,9 @@ class Card: CustomDebugStringConvertible {
         imageUrlString = dictionary["imageUrl"] as? String ?? ""
     }
 
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        return lhs.id == rhs.id
+    }
 
     var debugDescription: String {
         return "id: '\(id)', name: '\(name)', manaCost: '\(manaCost)', cmc: '\(cmc)', colors: '\(colors)', colorIdentity: '\(colorIdentity)', type: '\(type)', types: '\(types)', subtypes: '\(subtypes)', rarity: '\(rarity)', set: '\(set)', text: '\(text)', power: '\(power)', toughness: '\(toughness)', imageUrlString: '\(imageUrlString)'"

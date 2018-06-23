@@ -10,6 +10,7 @@
 		36084EBB1F2FEAA10008D04F /* MockCardDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EBA1F2FEAA10008D04F /* MockCardDataService.swift */; };
 		36084EC21F2FF6740008D04F /* BaseUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EC11F2FF6740008D04F /* BaseUITest.swift */; };
 		36084EC71F2FF7B00008D04F /* CardSearchUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36084EC61F2FF7B00008D04F /* CardSearchUITest.swift */; };
+		3625F18020DE8E3100CA7EEC /* Card+AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625F17F20DE8E3100CA7EEC /* Card+AttributedText.swift */; };
 		3666E1D71F2F637A0017A7C3 /* URLSessionPrototypingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */; };
 		36C4BADD20D44D7100978246 /* CardSearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4BAD620D44D7000978246 /* CardSearchResultTableViewController.swift */; };
 		36C4BADE20D44D7100978246 /* CardSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4BAD720D44D7000978246 /* CardSearchResultTableViewCell.swift */; };
@@ -44,6 +45,7 @@
 		36084EBA1F2FEAA10008D04F /* MockCardDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCardDataService.swift; sourceTree = "<group>"; };
 		36084EC11F2FF6740008D04F /* BaseUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITest.swift; sourceTree = "<group>"; };
 		36084EC61F2FF7B00008D04F /* CardSearchUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchUITest.swift; sourceTree = "<group>"; };
+		3625F17F20DE8E3100CA7EEC /* Card+AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+AttributedText.swift"; sourceTree = "<group>"; };
 		3666E1D61F2F637A0017A7C3 /* URLSessionPrototypingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionPrototypingTest.swift; sourceTree = "<group>"; };
 		36C4BAD620D44D7000978246 /* CardSearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchResultTableViewController.swift; sourceTree = "<group>"; };
 		36C4BAD720D44D7000978246 /* CardSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSearchResultTableViewCell.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				36C4BAD920D44D7100978246 /* Card.swift */,
+				3625F17F20DE8E3100CA7EEC /* Card+AttributedText.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3625F18020DE8E3100CA7EEC /* Card+AttributedText.swift in Sources */,
 				36C4BADD20D44D7100978246 /* CardSearchResultTableViewController.swift in Sources */,
 				36C4BAE820D45F5B00978246 /* CardTitleCell.swift in Sources */,
 				36C4BAE020D44D7100978246 /* CardService.swift in Sources */,

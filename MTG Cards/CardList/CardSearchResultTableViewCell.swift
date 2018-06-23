@@ -42,6 +42,7 @@ class CardSearchResultTableViewCell: UITableViewCell {
 
     override func prepareForReuse() {
         cardNameLabel.text = nil
+        cardNameLabel.attributedText = nil
         cardImageView.image = nil
     }
 
@@ -60,7 +61,7 @@ extension CardSearchResultTableViewCell {
             return
         }
 
-        cardNameLabel.text = card.name
+        cardNameLabel.attributedText = card.cardSetAndName(for: cardNameLabel)
 
         guard let imageURL = URL(string: card.imageUrlString) else {
             return

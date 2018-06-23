@@ -117,9 +117,13 @@ extension CardSearchResultTableViewController: UISearchBarDelegate {
 extension CardSearchResultTableViewController: CardImageLoadedDelegate {
 
     func imageLoaded(for card: Card) {
-        DispatchQueue.main.async {
-            self.tableView.beginUpdates()
-            self.tableView.endUpdates()
+        guard let results = results, results.contains(card) else {
+            return
+        }
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.beginUpdates()
+            self?.tableView.endUpdates()
         }
     }
 
@@ -155,6 +159,8 @@ extension CardSearchResultTableViewController {
     ///
     /// - Parameter searchTerm: Some string that you want to search cards for matches by name.
     func search(for searchTerm: String) {
+        results = nil
+        tableView.reloadData()
         RemoteCardService.shared.search(for: searchTerm) { (error, cards) in
             if let error = error {
                 return print("ERROR searching for card \(searchTerm): \(error)")
