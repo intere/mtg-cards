@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J1c-MD-PQa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card Info Table View Controller-->
+        <scene sceneID="mgN-PI-IbJ">
+            <objects>
+                <tableViewController id="J1c-MD-PQa" customClass="CardInfoTableViewController" customModule="MTG_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CCZ-eM-dPp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardTitleCell" id="s0P-1P-FGE" customClass="CardTitleCell" customModule="MTG_Cards" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s0P-1P-FGE" id="atl-iw-267">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgJ-3r-lG9">
+                                            <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Vesuvan Doppelganger">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="30" name="Chalkduster"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="pgJ-3r-lG9" secondAttribute="trailing" constant="8" id="NAC-rJ-qWU"/>
+                                        <constraint firstAttribute="bottom" secondItem="pgJ-3r-lG9" secondAttribute="bottom" constant="8" id="PzR-80-db7"/>
+                                        <constraint firstItem="pgJ-3r-lG9" firstAttribute="leading" secondItem="atl-iw-267" secondAttribute="leading" constant="8" id="cCh-qa-xju"/>
+                                        <constraint firstItem="pgJ-3r-lG9" firstAttribute="top" secondItem="atl-iw-267" secondAttribute="top" constant="8" id="cUk-th-4oI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="pgJ-3r-lG9" id="eL7-Ok-ylr"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardImageCell" rowHeight="120" id="LPI-lr-KqC" customClass="CardImageCell" customModule="MTG_Cards" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LPI-lr-KqC" id="OzY-Wk-khO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uIe-FJ-Qx4">
+                                            <rect key="frame" x="16" y="11" width="343" height="98"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uIe-FJ-Qx4" firstAttribute="top" secondItem="OzY-Wk-khO" secondAttribute="topMargin" id="IU3-29-vtd"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="uIe-FJ-Qx4" secondAttribute="trailing" id="hC3-qj-NRq"/>
+                                        <constraint firstItem="uIe-FJ-Qx4" firstAttribute="leading" secondItem="OzY-Wk-khO" secondAttribute="leadingMargin" id="jb5-pG-uUR"/>
+                                        <constraint firstItem="uIe-FJ-Qx4" firstAttribute="bottom" secondItem="OzY-Wk-khO" secondAttribute="bottomMargin" id="x5R-ur-tGi"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cardImage" destination="uIe-FJ-Qx4" id="SjD-Mg-qUf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="J1c-MD-PQa" id="f9A-Pv-dL5"/>
+                            <outlet property="delegate" destination="J1c-MD-PQa" id="B1P-c3-WYB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INq-Rz-uwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.59999999999999" y="-78.710644677661179"/>
+        </scene>
+    </scenes>
+</document>
