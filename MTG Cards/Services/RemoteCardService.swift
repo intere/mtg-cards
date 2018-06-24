@@ -55,6 +55,11 @@ class RemoteCardService {
 
 extension RemoteCardService: CardService {
 
+    /// Loads the info for a specific card (using the ID of that card).
+    ///
+    /// - Parameters:
+    ///   - identifier: The ID of the card you want to index.
+    ///   - callback: The block that handles the result (Error or a Card)
     func openCard(withIdentifier identifier: String, callback: @escaping CardResultCallback) {
         guard let url = cardUrl(id: identifier) else {
             return callback(Constants.urlCreationError, nil)
@@ -100,11 +105,10 @@ extension RemoteCardService: CardService {
         }
 
         getUrl(url) { (error, data) in
+            // Make sure there is no error and there is data:
             if let error = error {
                 return callback(error, nil)
             }
-
-            // Make sure there is data
             guard let data = data else {
                 return callback(Constants.noDataError, nil)
             }
@@ -114,19 +118,16 @@ extension RemoteCardService: CardService {
                 guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] else {
                     return callback(Constants.invalidFormatError, nil)
                 }
-
                 guard let cardMaps = json["cards"] as? [[String : AnyObject]] else {
                     return callback(Constants.invalidFormatError, nil)
                 }
 
                 callback(nil, cardMaps.map({Card(from: $0)}).sorted(by: { return $0.name < $1.name }))
-                
+
             } catch let error {
                 callback(error, nil)
             }
-
         }
-
     }
 
 }

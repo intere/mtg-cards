@@ -17,7 +17,7 @@ extension UIViewController {
     /// * Call out to the card service to get the card's metadata
     /// * When the card metadata loads, create a CardInfoVC, set the card and push it onto the navigation controller
     ///
-    /// - Parameter activity: <#activity description#>
+    /// - Parameter activity: The `NSUserActivity` that represents the splotlight search result action.
     func handle(userActivity activity: NSUserActivity) {
         guard activity.activityType == CSSearchableItemActionType, let info = activity.userInfo,
             let selectedIdentifier = info[CSSearchableItemActivityIdentifier] as? String else {
