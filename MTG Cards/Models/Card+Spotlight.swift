@@ -12,6 +12,9 @@ import UIKit
 
 extension Card {
 
+    /// Using the provided image, this card is indexed with Spotlight.
+    ///
+    /// - Parameter image: The image to associate with this card in spotlight search.
     func spotlightIndex(using image: UIImage) {
         let item = searchableItem(with: image)
         CSSearchableIndex.default().indexSearchableItems([item]) { (error) in
@@ -23,6 +26,10 @@ extension Card {
         }
     }
 
+    /// Converts this card (using the provided image) into a CSSearchableItem (indexable by spotlight)
+    ///
+    /// - Parameter image: The image to associate with this card.
+    /// - Returns: A CSSearchableItem that you can use to index the card in Spotlight.
     func searchableItem(with image: UIImage) -> CSSearchableItem {
         let searchItemAttributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypePNG as String)
         searchItemAttributeSet.title = name
@@ -31,26 +38,5 @@ extension Card {
 
         return CSSearchableItem(uniqueIdentifier: id, domainIdentifier: "card", attributeSet: searchItemAttributeSet)
     }
-
-//    func indexSearchableItems(){
-//        //let matches ...
-//        var searchableItems = [CSSearchableItem]()
-//
-//        for match in matches {
-//            let searchItemAttributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
-//            searchItemAttributeSet.title = match.title
-//            searchItemAttributeSet.contentDescription = match.content
-//            searchItemAttributeSet.thumbnailData = match.image
-//
-//            let searchableItem = CSSearchableItem(uniqueIdentifier: match.id, domainIdentifier: "matches", attributeSet: searchItemAttributeSet)
-//            searchableItems.append(searchableItem)
-//        }
-//
-//        CSSearchableIndex.default().indexSearchableItems(searchableItems) { (error) -> Void in
-//            if error != nil {
-//                print(error?.localizedDescription ?? "Error")
-//            }
-//        }
-//    }
 
 }

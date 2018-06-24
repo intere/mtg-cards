@@ -22,7 +22,8 @@ class CardInfoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = UITableViewAutomaticDimension
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: Notification.CardInfoTableViewController.updateTable, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData),
+                                               name: Notification.CardInfoTableViewController.updateTable, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {

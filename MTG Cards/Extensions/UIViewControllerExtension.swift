@@ -11,6 +11,13 @@ import UIKit
 
 extension UIViewController {
 
+    /// Handler for spotlight search.  This is called when a user performs a spotlight search that returns a result
+    /// that we've indexed.  It calls into our app and we handle it by delegating down to this function.
+    /// The following action takes place (if we determine this to be a spotlight search result):
+    /// * Call out to the card service to get the card's metadata
+    /// * When the card metadata loads, create a CardInfoVC, set the card and push it onto the navigation controller
+    ///
+    /// - Parameter activity: <#activity description#>
     func handle(userActivity activity: NSUserActivity) {
         guard activity.activityType == CSSearchableItemActionType, let info = activity.userInfo,
             let selectedIdentifier = info[CSSearchableItemActivityIdentifier] as? String else {
