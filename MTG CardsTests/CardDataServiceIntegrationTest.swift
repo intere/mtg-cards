@@ -97,3 +97,34 @@ class CardDataServiceIntegrationTest: XCTestCase {
     }
     
 }
+
+// MARK: - Single Card - by ID
+
+extension CardDataServiceIntegrationTest {
+
+    func testFetchCavernOfSouls() {
+        let cavernId = "64c7bb0c91bad39a825cd85f2ba37929325cc5bd"
+
+        let exp = expectation(description: "MTG Server Response")
+        RemoteCardService.shared.openCard(withIdentifier: cavernId) { (error, card) in
+            defer {
+                exp.fulfill()
+            }
+
+            if let error = error {
+                return XCTFail("Failed with error: \(error)")
+            }
+
+            guard let card = card else {
+                return XCTFail("Failed to get any results back")
+            }
+
+            XCTAssertEqual(cavernId, card.id)
+            XCTAssertEqual("Cavern of Souls", card.name)
+        }
+
+        waitForExpectations(timeout: 10)
+
+    }
+
+}

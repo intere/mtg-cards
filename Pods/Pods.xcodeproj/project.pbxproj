@@ -71,7 +71,7 @@
 		17053E723615053EF97BC62DBC2A8258 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
 		17B68E2D59DB384424F727DFDCAEC89C /* Pods-MTG CardsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTG CardsTests-frameworks.sh"; sourceTree = "<group>"; };
 		1C41CD4050337E5B8427F86A777F9415 /* Pods-MTG Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTG Cards.release.xcconfig"; sourceTree = "<group>"; };
-		1F1323741DC442320CBF493A79673534 /* UITestKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = UITestKit.modulemap; sourceTree = "<group>"; };
+		1F1323741DC442320CBF493A79673534 /* UITestKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = UITestKit.modulemap; sourceTree = "<group>"; };
 		245BE66918C63A0C76F7CF98A81FDBA4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286174D7AE2BEFD83ADA4C48C46DCD33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		329FEF35122CF957240FDF14E2931EEB /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
@@ -85,13 +85,13 @@
 		48901D03FE0E8DF0A1BE2D00C9AA291F /* Pods-MTG Cards-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MTG Cards-umbrella.h"; sourceTree = "<group>"; };
 		4F18A394EAB9E609101E7DA2A79E3EA9 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
 		509351DEB58BBC8B174D3CEDC4458238 /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
-		513E645A46391A7CFDC2265C51D582EE /* Pods-MTG CardsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MTG CardsTests.modulemap"; sourceTree = "<group>"; };
-		521C90A78AF12526326BA29A5B78A377 /* Pods_MTG_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MTG_Cards.framework; path = "Pods-MTG Cards.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B18446A2FDCE4E3F491AD51C752A0D3 /* Pods_MTG_CardsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MTG_CardsTests.framework; path = "Pods-MTG CardsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		513E645A46391A7CFDC2265C51D582EE /* Pods-MTG CardsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MTG CardsTests.modulemap"; sourceTree = "<group>"; };
+		521C90A78AF12526326BA29A5B78A377 /* Pods_MTG_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTG_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B18446A2FDCE4E3F491AD51C752A0D3 /* Pods_MTG_CardsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTG_CardsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C79F7471FC8E6CD38E04953E1959D3F /* Pods-MTG Cards-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTG Cards-resources.sh"; sourceTree = "<group>"; };
-		638A36770E64840BE39D3F18487BC55D /* UITestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UITestKit.framework; path = UITestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		638A36770E64840BE39D3F18487BC55D /* UITestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UITestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		662A2D62FAFBED79BFEBF833E2C0F586 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
-		66983DF460B2928EEE5E2E15918D9774 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Kingfisher.modulemap; sourceTree = "<group>"; };
+		66983DF460B2928EEE5E2E15918D9774 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		676A8FE8460B38D3971EC085D0FE996A /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
 		74A299FBD2399BA676AC38F8582967A5 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
 		7BD2713682DADF2FD9A52A7E424BECF5 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
@@ -99,20 +99,20 @@
 		85CD1DB0B69CC4D878603BE77A3C91D3 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
 		879FBAC0C2379A94F721934936C88490 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
 		920BDF939A91630F4B3C7779BBE7A3C1 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9AE55B73A90C659E0F63A8C5E1F98494 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
 		9DED8F27626E808E172FA72DB545E9CB /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
 		9ED579D057AB75F9AA1C31849BD0EEF1 /* Pods-MTG CardsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTG CardsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F523753E48C092E52BAE5FE08C3C6F9 /* Pods-MTG CardsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MTG CardsTests-umbrella.h"; sourceTree = "<group>"; };
 		A025F22BBB11B240F9E0860A98EEA392 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		A4F03CFB0D7B5701E9CEE4A46C6DB96C /* UITestKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITestKit-umbrella.h"; sourceTree = "<group>"; };
-		AC11872682B52A6737D95279C85F1CD3 /* Pods-MTG Cards.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MTG Cards.modulemap"; sourceTree = "<group>"; };
+		AC11872682B52A6737D95279C85F1CD3 /* Pods-MTG Cards.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MTG Cards.modulemap"; sourceTree = "<group>"; };
 		AE46FEE12DD474D74EC35108D8BA661C /* UITestKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UITestKit.xcconfig; sourceTree = "<group>"; };
 		AE77DD2FB5D7F27F4578C724DA04B785 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
 		B053DDB09E69B0995271860121E1CD06 /* UITestKitBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITestKitBase.swift; path = UITestKit/Classes/UITestKitBase.swift; sourceTree = "<group>"; };
 		BB2720C39FFDB1AAC56EFC01713DDCE5 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
 		BD1168A4DCD9BF8255BF1B6C43AD9BA1 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
-		BE06C05FECFABFA618D446423FCDD412 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE06C05FECFABFA618D446423FCDD412 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA20D218F72308301AC117FD10CFE854 /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
 		CBE4812876BCE2F7CE601502EF298184 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		CDC8440BDE680C5AB02949B0C177D8B1 /* Pods-MTG Cards-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTG Cards-dummy.m"; sourceTree = "<group>"; };
@@ -259,7 +259,6 @@
 				F0BD5B112CDBB4CED644A287B2F66006 /* UIButton+Kingfisher.swift */,
 				1E7996689BFC92EABAA7191C40DA5272 /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -310,7 +309,6 @@
 				B053DDB09E69B0995271860121E1CD06 /* UITestKitBase.swift */,
 				4A3CC80899A4806B1D9D34E0CF7A4302 /* Support Files */,
 			);
-			name = UITestKit;
 			path = UITestKit;
 			sourceTree = "<group>";
 		};
@@ -723,7 +721,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
@@ -908,7 +906,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
