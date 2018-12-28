@@ -7,44 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00A1317BA629D12AE9BAB0384BB079C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286174D7AE2BEFD83ADA4C48C46DCD33 /* Foundation.framework */; };
-		0EB41DA1E17556A6CA52571B21AECF35 /* UITestKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4F03CFB0D7B5701E9CEE4A46C6DB96C /* UITestKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15F192484CD7833C82BBB6500CE24C50 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17053E723615053EF97BC62DBC2A8258 /* ImageProcessor.swift */; };
-		1F9D95C57864416D56FADC88A5A50457 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A2D62FAFBED79BFEBF833E2C0F586 /* ImageDownloader.swift */; };
-		23B956A659AF2E76734D07458429F29F /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB322AA232B4A2964804577EC1E65F /* ThreadHelper.swift */; };
-		2A256604A39C74C9C9954DAB2041878D /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA20D218F72308301AC117FD10CFE854 /* String+MD5.swift */; };
+		0096C6816AC3D92834AB65C49518C177 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF982D51BC0D6C99939C20E2B05CC42 /* ImageView+Kingfisher.swift */; };
+		03E0A134F1DDF33EA16F004F1A230CA1 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE4DE64FAF77233245299C1AFA6A55E /* FormatIndicatedCacheSerializer.swift */; };
+		0EB41DA1E17556A6CA52571B21AECF35 /* UITestKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BD07CDAAB7AC8035745AB83364589EA /* UITestKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		103228D906B112AA75562E8B17179127 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D890BCDE0BA94BEBBE619CCF5C2AFEC /* Indicator.swift */; };
+		114397DE4A2DC0204868A79F4BE13769 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82239D5D2A20EFFB10A4BFD57D91B9 /* Filter.swift */; };
+		2283375C0C99789CF47EEDA0CE9D3D80 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32782258C43970A5402A8E1E7A2837 /* ImageProcessor.swift */; };
 		2A7521B2C20A2F1BBB4D2FD8D318646E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286174D7AE2BEFD83ADA4C48C46DCD33 /* Foundation.framework */; };
-		2E154F53E56940FC016558CB1D9B49A3 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1168A4DCD9BF8255BF1B6C43AD9BA1 /* KingfisherManager.swift */; };
-		330A65D7E8A9DA4A72102065DDF27BDD /* Pods-MTG Cards-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8440BDE680C5AB02949B0C177D8B1 /* Pods-MTG Cards-dummy.m */; };
-		33B45CB8EBE94E47A5B541699555B2EA /* TestKitBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5CE24B12F5F771C790E3D597165EA /* TestKitBase.swift */; };
-		36F504803AC5AE737F3A7F227A2883BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BDF939A91630F4B3C7779BBE7A3C1 /* Image.swift */; };
+		2ABE0F8940C00BD429E33ED7F7C9EA1D /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A39E78C5EA41E0BC3A65C19B6DA4B4 /* KingfisherOptionsInfo.swift */; };
+		330A65D7E8A9DA4A72102065DDF27BDD /* Pods-MTG Cards-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B936CC33D52A2FAD5AFD5859CB51D62A /* Pods-MTG Cards-dummy.m */; };
+		33B45CB8EBE94E47A5B541699555B2EA /* TestKitBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB737D5128D6A71D4687E40DADA8D6DA /* TestKitBase.swift */; };
+		3464228E4F1F63DBCA803CC848A6A8C0 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E78C7C0CAB73BDF1BC73CA8C8752A /* Resource.swift */; };
 		3B5FB0CDAEE82BBDEF47E7862781A30F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FB40A499B8B33B6AC809FFA32B397 /* XCTest.framework */; };
-		3F2A2A1940FBE921847ED80C8781F1C2 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE55B73A90C659E0F63A8C5E1F98494 /* Box.swift */; };
-		4AD00EED32EA5B3D946BD06BD7A425AF /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676A8FE8460B38D3971EC085D0FE996A /* Resource.swift */; };
-		607D176F8620CE53D3711429C510D5E5 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A299FBD2399BA676AC38F8582967A5 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62FF161052DEB878DBC35D8402ED380F /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A912D147D1BFA0336951841545DF9 /* RequestModifier.swift */; };
+		403E3E170DCF269D5CBA1C530ECA901B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286174D7AE2BEFD83ADA4C48C46DCD33 /* Foundation.framework */; };
+		4074AA6F2557EF7970DEDE67B04433B6 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDAEA0360A71562AA7CC3FC06F5BEC4 /* AnimatedImageView.swift */; };
+		498DC29155467AC093701C1AF5EE3807 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A05688639CC6A8BF465CBA2375AE29B /* Placeholder.swift */; };
+		509A5621DAB44B06929B30ACCA7CA598 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A58C643C9409ED9850541DC8E486EB28 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6435E0AEB8A3EF2D2A63883970186915 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286174D7AE2BEFD83ADA4C48C46DCD33 /* Foundation.framework */; };
-		6A007E9D44771E83A6D33E3A8EB4003E /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B6F9629AAE4EDAD454DC8EE010A6E9 /* Kingfisher-dummy.m */; };
-		6D502E82BB77584F43C08B2C115E9CAE /* UITestKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FC560056FF05BDB604E842655433CE /* UITestKit-dummy.m */; };
-		7B262B1E8AC91308347656FCF82E1192 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DB64DD07AA168984C6F2C14C6C4C3 /* ImageTransition.swift */; };
-		8CAA257DBC4B274E5882820E5C2A5B93 /* Pods-MTG CardsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F523753E48C092E52BAE5FE08C3C6F9 /* Pods-MTG CardsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		934A36D6B847A9B437846EB47FD3C9C4 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FBAC0C2379A94F721934936C88490 /* Filter.swift */; };
-		9C1BB53BA70217F566B36537A3A63880 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2713682DADF2FD9A52A7E424BECF5 /* AnimatedImageView.swift */; };
-		AA8999A0EE6BD9A4352551907C87DCA2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A025F22BBB11B240F9E0860A98EEA392 /* CFNetwork.framework */; };
-		AB860DDD59CD5022F61D6BD31F634CAC /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12066C93AB9A483DAD2CB6B667CC1925 /* ImagePrefetcher.swift */; };
-		BB2D09C37CAA41F61C8231B42449818F /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4812876BCE2F7CE601502EF298184 /* ImageView+Kingfisher.swift */; };
-		BDDA79DF79ECE8FAA434BC2D6D31A7C1 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2720C39FFDB1AAC56EFC01713DDCE5 /* FormatIndicatedCacheSerializer.swift */; };
-		C250869280B4411EBB42E1BD15FB2A30 /* UITestKitBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053DDB09E69B0995271860121E1CD06 /* UITestKitBase.swift */; };
-		C8A24B5D1DE2CE90CDB894280AB8DC89 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD5B112CDBB4CED644A287B2F66006 /* UIButton+Kingfisher.swift */; };
-		CCE40A42812422FDB389D09C05A27153 /* Pods-MTG Cards-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48901D03FE0E8DF0A1BE2D00C9AA291F /* Pods-MTG Cards-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4D6C0A689145B53E332183C4B1AA8A2 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FEF35122CF957240FDF14E2931EEB /* Indicator.swift */; };
-		D535F967F08593E5B52B238DE0793E6F /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DED8F27626E808E172FA72DB545E9CB /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D7F44E70FBF99B6917AFB2218064DCF3 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF6E06647360F385EF826BCA755E4A /* CacheSerializer.swift */; };
-		D93FFDFFDED6C6DE36B7669792DA27ED /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F18A394EAB9E609101E7DA2A79E3EA9 /* ImageCache.swift */; };
-		E31D9ECACCCF91BA47600348F7387D80 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CD1DB0B69CC4D878603BE77A3C91D3 /* Kingfisher.swift */; };
-		F2F46DDB7D7FC3B69CCFA48E84DC9108 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF929B2F0C271086114EA5CD383618 /* KingfisherOptionsInfo.swift */; };
+		6486781D756A9D71FE5C6E56CC9A343F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A572A5CF934B6BFCE9FA538DCCB20 /* ImageCache.swift */; };
+		6D502E82BB77584F43C08B2C115E9CAE /* UITestKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 829D9BE38F5FCC5CDD7656D8B98FD236 /* UITestKit-dummy.m */; };
+		7B2A61E55C43E9B12E5B7DD852456AEE /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F73F538268D133ACADFDE9172289F8 /* ImageTransition.swift */; };
+		84CF440A4E3CCDEE93FA2475748A9934 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A025F22BBB11B240F9E0860A98EEA392 /* CFNetwork.framework */; };
+		8CAA257DBC4B274E5882820E5C2A5B93 /* Pods-MTG CardsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C15D29BE87E5A23C7B51B93B4BADBB36 /* Pods-MTG CardsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95156987028D309F91AC55FBDFE01643 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A5BE84C24DC90F6F5ACE88B4755327 /* Kingfisher-dummy.m */; };
+		A8A79840E81BFA3D8DCC29BE71F1AEC4 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FE48B17AF11743C3E758E7E45DC39 /* KingfisherManager.swift */; };
+		A9D2A6547EE5F6532EF8D1F1870BF158 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D44C0B0AAA38CD7663D9AC91BC9AF /* CacheSerializer.swift */; };
+		B564B930C3B6CCFCC109ABF374B21CE6 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93125E42FD381CF71B88A21CE7C1E6 /* ImageModifier.swift */; };
+		B924069CD75769E22765912C66A87BF3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BA3D719FBE06CC20A693B9C5A5C69 /* Image.swift */; };
+		BA4DF38E820FF6B40FFABF8B1BBCC615 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = B3FD9026250978037393272B7B045609 /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE9FB5E8188E0B68DB277B09A06E79BA /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8C628D48669FBCF56215797B6B178 /* ImagePrefetcher.swift */; };
+		C250869280B4411EBB42E1BD15FB2A30 /* UITestKitBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB474E4F765B7D0E83A4414B13A863D /* UITestKitBase.swift */; };
+		C32C7FE70764DE37935F6A5D80CB17C7 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6BF3D01E00D1DAC22C9326697375E1 /* RequestModifier.swift */; };
+		CCE40A42812422FDB389D09C05A27153 /* Pods-MTG Cards-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5B5DC21B0BCC7ADC417450E8DB971FE /* Pods-MTG Cards-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE38861F1268294930C074FC3F807E55 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C7337920A0B39923B97F762CABCA75 /* ThreadHelper.swift */; };
+		CEEB7C897409C08DF53289E307AB987C /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AC5D36D81FDE0DD4835EE7AF95CBD /* String+MD5.swift */; };
+		D1575AAADDCEA395E3828EBAC2A772FA /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5090DF1E4D4C33FB12927F854C5C567 /* Box.swift */; };
+		DA7A5ECA4C0B39776007BE89B99227EF /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C881078A842BCFF77B839AF7F8C3B4 /* ImageDownloader.swift */; };
+		E9E5F082818BE1AA4722E77DD066450F /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81D6A835911B26F23DAC4B8EBAE452 /* Kingfisher.swift */; };
 		F4F73E52A65F42A5A4B1E59C0C6BAAAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286174D7AE2BEFD83ADA4C48C46DCD33 /* Foundation.framework */; };
-		FD2B63686CEB43B2DD8F98A91F79B233 /* Pods-MTG CardsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF8B26CC6DF33A295AAA21D33A98FED /* Pods-MTG CardsTests-dummy.m */; };
+		FD2B63686CEB43B2DD8F98A91F79B233 /* Pods-MTG CardsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AADA16EFAE88D894B2D2279CB55595 /* Pods-MTG CardsTests-dummy.m */; };
+		FED97351EC4705507DAB175106B819C8 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6FC7518D659E4B98C2BF2022FD4CF9 /* UIButton+Kingfisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2F0C0F810568D3E82219429D9D870F04;
+			remoteGlobalIDString = 4F87037150ABE2C9238B54E8F6E33F36;
 			remoteInfo = Kingfisher;
 		};
 		E53AA08BA999585D5D94B555078A4E16 /* PBXContainerItemProxy */ = {
@@ -65,70 +67,72 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03AB322AA232B4A2964804577EC1E65F /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
-		12066C93AB9A483DAD2CB6B667CC1925 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
-		157A912D147D1BFA0336951841545DF9 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/RequestModifier.swift; sourceTree = "<group>"; };
-		17053E723615053EF97BC62DBC2A8258 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
-		17B68E2D59DB384424F727DFDCAEC89C /* Pods-MTG CardsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTG CardsTests-frameworks.sh"; sourceTree = "<group>"; };
-		1C41CD4050337E5B8427F86A777F9415 /* Pods-MTG Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTG Cards.release.xcconfig"; sourceTree = "<group>"; };
-		1F1323741DC442320CBF493A79673534 /* UITestKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = UITestKit.modulemap; sourceTree = "<group>"; };
-		245BE66918C63A0C76F7CF98A81FDBA4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E91B85BEB1DB5AD51314DFCBA48ACD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07CA4DE6462FF50497270EEC228AC492 /* Pods-MTG CardsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTG CardsTests-resources.sh"; sourceTree = "<group>"; };
+		084C2613090B2C060D49EF98EEF4AF5B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		200FC2FCD2C16C1B9F7C372AA0B7A836 /* Pods-MTG CardsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTG CardsTests.release.xcconfig"; sourceTree = "<group>"; };
+		255048B7CE1172D5FCD5436BECB6F364 /* Pods-MTG Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTG Cards.release.xcconfig"; sourceTree = "<group>"; };
 		286174D7AE2BEFD83ADA4C48C46DCD33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		329FEF35122CF957240FDF14E2931EEB /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
-		33844A4AA559FBF4E3C3705019AEF180 /* Pods-MTG CardsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTG CardsTests.release.xcconfig"; sourceTree = "<group>"; };
-		35B6F9629AAE4EDAD454DC8EE010A6E9 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
-		39E5CE24B12F5F771C790E3D597165EA /* TestKitBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestKitBase.swift; path = UITestKit/Classes/TestKitBase.swift; sourceTree = "<group>"; };
-		42FC560056FF05BDB604E842655433CE /* UITestKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITestKit-dummy.m"; sourceTree = "<group>"; };
-		441555638CA04ABBAE49FF1ED2A969A6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		445FA419F1F4878E9F9615FD5063BC36 /* Pods-MTG Cards-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTG Cards-frameworks.sh"; sourceTree = "<group>"; };
-		461051373FD0B96CBF7B7E82F92C8F7C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48901D03FE0E8DF0A1BE2D00C9AA291F /* Pods-MTG Cards-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MTG Cards-umbrella.h"; sourceTree = "<group>"; };
-		4F18A394EAB9E609101E7DA2A79E3EA9 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
-		509351DEB58BBC8B174D3CEDC4458238 /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
-		513E645A46391A7CFDC2265C51D582EE /* Pods-MTG CardsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MTG CardsTests.modulemap"; sourceTree = "<group>"; };
-		521C90A78AF12526326BA29A5B78A377 /* Pods_MTG_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTG_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B18446A2FDCE4E3F491AD51C752A0D3 /* Pods_MTG_CardsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTG_CardsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C79F7471FC8E6CD38E04953E1959D3F /* Pods-MTG Cards-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTG Cards-resources.sh"; sourceTree = "<group>"; };
-		638A36770E64840BE39D3F18487BC55D /* UITestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UITestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		662A2D62FAFBED79BFEBF833E2C0F586 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
-		66983DF460B2928EEE5E2E15918D9774 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Kingfisher.modulemap; sourceTree = "<group>"; };
-		676A8FE8460B38D3971EC085D0FE996A /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
-		74A299FBD2399BA676AC38F8582967A5 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
-		7BD2713682DADF2FD9A52A7E424BECF5 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
-		81BEF8EA99370507F98EC0D1D80CFA9C /* Pods-MTG Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTG Cards.debug.xcconfig"; sourceTree = "<group>"; };
-		85CD1DB0B69CC4D878603BE77A3C91D3 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
-		879FBAC0C2379A94F721934936C88490 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
-		920BDF939A91630F4B3C7779BBE7A3C1 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9AE55B73A90C659E0F63A8C5E1F98494 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
-		9DED8F27626E808E172FA72DB545E9CB /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
-		9ED579D057AB75F9AA1C31849BD0EEF1 /* Pods-MTG CardsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTG CardsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9F523753E48C092E52BAE5FE08C3C6F9 /* Pods-MTG CardsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MTG CardsTests-umbrella.h"; sourceTree = "<group>"; };
+		2EF982D51BC0D6C99939C20E2B05CC42 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		42C881078A842BCFF77B839AF7F8C3B4 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
+		4B4BA3D719FBE06CC20A693B9C5A5C69 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
+		4CD831F425C40A72E6B13DA7C35D78EC /* Pods-MTG Cards-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTG Cards-frameworks.sh"; sourceTree = "<group>"; };
+		4D890BCDE0BA94BEBBE619CCF5C2AFEC /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
+		4F6BF3D01E00D1DAC22C9326697375E1 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/RequestModifier.swift; sourceTree = "<group>"; };
+		521C90A78AF12526326BA29A5B78A377 /* Pods_MTG_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MTG_Cards.framework; path = "Pods-MTG Cards.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F40F1ADED578587D9FE45453182215 /* Pods-MTG CardsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTG CardsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		53EED5F942C64794D6B7112694F16BFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B18446A2FDCE4E3F491AD51C752A0D3 /* Pods_MTG_CardsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MTG_CardsTests.framework; path = "Pods-MTG CardsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60DD699C8B9C22A635A89EF40FF12079 /* Pods-MTG Cards-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTG Cards-acknowledgements.markdown"; sourceTree = "<group>"; };
+		62C7337920A0B39923B97F762CABCA75 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
+		638A36770E64840BE39D3F18487BC55D /* UITestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UITestKit.framework; path = UITestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		661A572A5CF934B6BFCE9FA538DCCB20 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
+		6A05688639CC6A8BF465CBA2375AE29B /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Placeholder.swift; sourceTree = "<group>"; };
+		7369A370E089F0C0F2BB7405B1A6756A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4CD596D2FEBFE281F51890200BDFE4 /* Pods-MTG Cards-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTG Cards-resources.sh"; sourceTree = "<group>"; };
+		7BD07CDAAB7AC8035745AB83364589EA /* UITestKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITestKit-umbrella.h"; sourceTree = "<group>"; };
+		7C1B262EF635CF421DD77A86223E6EB0 /* Pods-MTG Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTG Cards.debug.xcconfig"; sourceTree = "<group>"; };
+		7DDAEA0360A71562AA7CC3FC06F5BEC4 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
+		7F2E09F5115E0F558FC22CA1C6CA8B7B /* Pods-MTG CardsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MTG CardsTests.modulemap"; sourceTree = "<group>"; };
+		829D9BE38F5FCC5CDD7656D8B98FD236 /* UITestKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITestKit-dummy.m"; sourceTree = "<group>"; };
+		8B1D44C0B0AAA38CD7663D9AC91BC9AF /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/CacheSerializer.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9CC1C433FE90C4A9EBA4665D0151F505 /* UITestKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UITestKit.modulemap; sourceTree = "<group>"; };
+		9EE4DE64FAF77233245299C1AFA6A55E /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
+		9FA8C628D48669FBCF56215797B6B178 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
 		A025F22BBB11B240F9E0860A98EEA392 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		A4F03CFB0D7B5701E9CEE4A46C6DB96C /* UITestKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITestKit-umbrella.h"; sourceTree = "<group>"; };
-		AC11872682B52A6737D95279C85F1CD3 /* Pods-MTG Cards.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MTG Cards.modulemap"; sourceTree = "<group>"; };
-		AE46FEE12DD474D74EC35108D8BA661C /* UITestKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UITestKit.xcconfig; sourceTree = "<group>"; };
-		AE77DD2FB5D7F27F4578C724DA04B785 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
-		B053DDB09E69B0995271860121E1CD06 /* UITestKitBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITestKitBase.swift; path = UITestKit/Classes/UITestKitBase.swift; sourceTree = "<group>"; };
-		BB2720C39FFDB1AAC56EFC01713DDCE5 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
-		BD1168A4DCD9BF8255BF1B6C43AD9BA1 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
-		BE06C05FECFABFA618D446423FCDD412 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA20D218F72308301AC117FD10CFE854 /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
-		CBE4812876BCE2F7CE601502EF298184 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
-		CDC8440BDE680C5AB02949B0C177D8B1 /* Pods-MTG Cards-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTG Cards-dummy.m"; sourceTree = "<group>"; };
-		D271B3262F0D2BF6EBDDFFF3CD44B15D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3BF6E06647360F385EF826BCA755E4A /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/CacheSerializer.swift; sourceTree = "<group>"; };
-		D3EF929B2F0C271086114EA5CD383618 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
-		D43290FF3529419F906D8EC0592F10AD /* Pods-MTG CardsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTG CardsTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		EBF8B26CC6DF33A295AAA21D33A98FED /* Pods-MTG CardsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTG CardsTests-dummy.m"; sourceTree = "<group>"; };
-		EDB80C46A95ED50F6D2400B11699D1E4 /* Pods-MTG CardsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTG CardsTests-resources.sh"; sourceTree = "<group>"; };
-		EFD03AC7D82BD969F0FD35CAE63F0726 /* Pods-MTG CardsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTG CardsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F0BD5B112CDBB4CED644A287B2F66006 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
-		F10DB64DD07AA168984C6F2C14C6C4C3 /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
-		F15C57AA4C468D8334FE3E8F49F54AFE /* Pods-MTG Cards-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTG Cards-acknowledgements.plist"; sourceTree = "<group>"; };
+		A1AADA16EFAE88D894B2D2279CB55595 /* Pods-MTG CardsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTG CardsTests-dummy.m"; sourceTree = "<group>"; };
+		A58C643C9409ED9850541DC8E486EB28 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
+		A6B27372492C84D8ED2BE978DF7D8E74 /* Pods-MTG CardsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTG CardsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE6FC7518D659E4B98C2BF2022FD4CF9 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		B1111B473121107D6A28D781BC5A6663 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
+		B3FD9026250978037393272B7B045609 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
+		B5B5DC21B0BCC7ADC417450E8DB971FE /* Pods-MTG Cards-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MTG Cards-umbrella.h"; sourceTree = "<group>"; };
+		B6A01027F22B36C959F69FF883E7CD49 /* Pods-MTG Cards.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MTG Cards.modulemap"; sourceTree = "<group>"; };
+		B936CC33D52A2FAD5AFD5859CB51D62A /* Pods-MTG Cards-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTG Cards-dummy.m"; sourceTree = "<group>"; };
+		BE06C05FECFABFA618D446423FCDD412 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C15D29BE87E5A23C7B51B93B4BADBB36 /* Pods-MTG CardsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MTG CardsTests-umbrella.h"; sourceTree = "<group>"; };
+		C615C1C918634E886283B47E7C9D4769 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
+		CF0AC5D36D81FDE0DD4835EE7AF95CBD /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
+		D10E78C7C0CAB73BDF1BC73CA8C8752A /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
+		D2B5D0B94B0828CE07E0FA0400563DCE /* UITestKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UITestKit.xcconfig; sourceTree = "<group>"; };
+		D5090DF1E4D4C33FB12927F854C5C567 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
+		D7A39E78C5EA41E0BC3A65C19B6DA4B4 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		D8A5BE84C24DC90F6F5ACE88B4755327 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
+		D8D2FAAE1794F94FF7BF4C82E7F7F49C /* Pods-MTG CardsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTG CardsTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DE32782258C43970A5402A8E1E7A2837 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
+		E2E47830BF73053325649C14A8ED6A4D /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
+		E32FE48B17AF11743C3E758E7E45DC39 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
+		E534B4E968BC1171C67970AECF644593 /* Pods-MTG Cards-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTG Cards-acknowledgements.plist"; sourceTree = "<group>"; };
+		EB737D5128D6A71D4687E40DADA8D6DA /* TestKitBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestKitBase.swift; path = UITestKit/Classes/TestKitBase.swift; sourceTree = "<group>"; };
+		EB93125E42FD381CF71B88A21CE7C1E6 /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/ImageModifier.swift; sourceTree = "<group>"; };
+		ECB474E4F765B7D0E83A4414B13A863D /* UITestKitBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITestKitBase.swift; path = UITestKit/Classes/UITestKitBase.swift; sourceTree = "<group>"; };
+		ED82239D5D2A20EFFB10A4BFD57D91B9 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
 		F18FB40A499B8B33B6AC809FFA32B397 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F79C58CB7A5FEBDF69464A86E6047D03 /* UITestKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITestKit-prefix.pch"; sourceTree = "<group>"; };
-		FCE8FF80802EBAA1A87B670E000F2BB8 /* Pods-MTG Cards-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTG Cards-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F39B5D11677EBC03B6B26D914DBF8255 /* UITestKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITestKit-prefix.pch"; sourceTree = "<group>"; };
+		F60F14F5158C3B6637B87C2983483CDA /* Pods-MTG CardsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTG CardsTests-frameworks.sh"; sourceTree = "<group>"; };
+		F6F73F538268D133ACADFDE9172289F8 /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
+		FF81D6A835911B26F23DAC4B8EBAE452 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,12 +161,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9FDF6DE1E5D9AA05F14B33C427FB5C2 /* Frameworks */ = {
+		A05AD251435FB24E096BBA193F9C99F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA8999A0EE6BD9A4352551907C87DCA2 /* CFNetwork.framework in Frameworks */,
-				00A1317BA629D12AE9BAB0384BB079C3 /* Foundation.framework in Frameworks */,
+				84CF440A4E3CCDEE93FA2475748A9934 /* CFNetwork.framework in Frameworks */,
+				403E3E170DCF269D5CBA1C530ECA901B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,33 +181,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1E7996689BFC92EABAA7191C40DA5272 /* Support Files */ = {
+		18C0808BFAB922261598B4CDBCC45C7F /* Pods-MTG Cards */ = {
 			isa = PBXGroup;
 			children = (
-				245BE66918C63A0C76F7CF98A81FDBA4 /* Info.plist */,
-				66983DF460B2928EEE5E2E15918D9774 /* Kingfisher.modulemap */,
-				509351DEB58BBC8B174D3CEDC4458238 /* Kingfisher.xcconfig */,
-				35B6F9629AAE4EDAD454DC8EE010A6E9 /* Kingfisher-dummy.m */,
-				AE77DD2FB5D7F27F4578C724DA04B785 /* Kingfisher-prefix.pch */,
-				74A299FBD2399BA676AC38F8582967A5 /* Kingfisher-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Kingfisher";
-			sourceTree = "<group>";
-		};
-		440DF22A629AD956E02B54221E57E68B /* Pods-MTG Cards */ = {
-			isa = PBXGroup;
-			children = (
-				441555638CA04ABBAE49FF1ED2A969A6 /* Info.plist */,
-				AC11872682B52A6737D95279C85F1CD3 /* Pods-MTG Cards.modulemap */,
-				FCE8FF80802EBAA1A87B670E000F2BB8 /* Pods-MTG Cards-acknowledgements.markdown */,
-				F15C57AA4C468D8334FE3E8F49F54AFE /* Pods-MTG Cards-acknowledgements.plist */,
-				CDC8440BDE680C5AB02949B0C177D8B1 /* Pods-MTG Cards-dummy.m */,
-				445FA419F1F4878E9F9615FD5063BC36 /* Pods-MTG Cards-frameworks.sh */,
-				5C79F7471FC8E6CD38E04953E1959D3F /* Pods-MTG Cards-resources.sh */,
-				48901D03FE0E8DF0A1BE2D00C9AA291F /* Pods-MTG Cards-umbrella.h */,
-				81BEF8EA99370507F98EC0D1D80CFA9C /* Pods-MTG Cards.debug.xcconfig */,
-				1C41CD4050337E5B8427F86A777F9415 /* Pods-MTG Cards.release.xcconfig */,
+				7369A370E089F0C0F2BB7405B1A6756A /* Info.plist */,
+				B6A01027F22B36C959F69FF883E7CD49 /* Pods-MTG Cards.modulemap */,
+				60DD699C8B9C22A635A89EF40FF12079 /* Pods-MTG Cards-acknowledgements.markdown */,
+				E534B4E968BC1171C67970AECF644593 /* Pods-MTG Cards-acknowledgements.plist */,
+				B936CC33D52A2FAD5AFD5859CB51D62A /* Pods-MTG Cards-dummy.m */,
+				4CD831F425C40A72E6B13DA7C35D78EC /* Pods-MTG Cards-frameworks.sh */,
+				7A4CD596D2FEBFE281F51890200BDFE4 /* Pods-MTG Cards-resources.sh */,
+				B5B5DC21B0BCC7ADC417450E8DB971FE /* Pods-MTG Cards-umbrella.h */,
+				7C1B262EF635CF421DD77A86223E6EB0 /* Pods-MTG Cards.debug.xcconfig */,
+				255048B7CE1172D5FCD5436BECB6F364 /* Pods-MTG Cards.release.xcconfig */,
 			);
 			name = "Pods-MTG Cards";
 			path = "Target Support Files/Pods-MTG Cards";
@@ -212,53 +202,42 @@
 		44F28512EED8DBDA973314D999CA53B9 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				440DF22A629AD956E02B54221E57E68B /* Pods-MTG Cards */,
-				928FE2C162A4067EC679BB0FFADAA5AA /* Pods-MTG CardsTests */,
+				18C0808BFAB922261598B4CDBCC45C7F /* Pods-MTG Cards */,
+				C6425F6815D3847B15477D5FFA44F83F /* Pods-MTG CardsTests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		4A3CC80899A4806B1D9D34E0CF7A4302 /* Support Files */ = {
+		69F79AB1D0CD31373F69A60020E53EDA /* Kingfisher */ = {
 			isa = PBXGroup;
 			children = (
-				461051373FD0B96CBF7B7E82F92C8F7C /* Info.plist */,
-				1F1323741DC442320CBF493A79673534 /* UITestKit.modulemap */,
-				AE46FEE12DD474D74EC35108D8BA661C /* UITestKit.xcconfig */,
-				42FC560056FF05BDB604E842655433CE /* UITestKit-dummy.m */,
-				F79C58CB7A5FEBDF69464A86E6047D03 /* UITestKit-prefix.pch */,
-				A4F03CFB0D7B5701E9CEE4A46C6DB96C /* UITestKit-umbrella.h */,
+				7DDAEA0360A71562AA7CC3FC06F5BEC4 /* AnimatedImageView.swift */,
+				D5090DF1E4D4C33FB12927F854C5C567 /* Box.swift */,
+				8B1D44C0B0AAA38CD7663D9AC91BC9AF /* CacheSerializer.swift */,
+				ED82239D5D2A20EFFB10A4BFD57D91B9 /* Filter.swift */,
+				9EE4DE64FAF77233245299C1AFA6A55E /* FormatIndicatedCacheSerializer.swift */,
+				4B4BA3D719FBE06CC20A693B9C5A5C69 /* Image.swift */,
+				661A572A5CF934B6BFCE9FA538DCCB20 /* ImageCache.swift */,
+				42C881078A842BCFF77B839AF7F8C3B4 /* ImageDownloader.swift */,
+				EB93125E42FD381CF71B88A21CE7C1E6 /* ImageModifier.swift */,
+				9FA8C628D48669FBCF56215797B6B178 /* ImagePrefetcher.swift */,
+				DE32782258C43970A5402A8E1E7A2837 /* ImageProcessor.swift */,
+				F6F73F538268D133ACADFDE9172289F8 /* ImageTransition.swift */,
+				2EF982D51BC0D6C99939C20E2B05CC42 /* ImageView+Kingfisher.swift */,
+				4D890BCDE0BA94BEBBE619CCF5C2AFEC /* Indicator.swift */,
+				B3FD9026250978037393272B7B045609 /* Kingfisher.h */,
+				FF81D6A835911B26F23DAC4B8EBAE452 /* Kingfisher.swift */,
+				E32FE48B17AF11743C3E758E7E45DC39 /* KingfisherManager.swift */,
+				D7A39E78C5EA41E0BC3A65C19B6DA4B4 /* KingfisherOptionsInfo.swift */,
+				6A05688639CC6A8BF465CBA2375AE29B /* Placeholder.swift */,
+				4F6BF3D01E00D1DAC22C9326697375E1 /* RequestModifier.swift */,
+				D10E78C7C0CAB73BDF1BC73CA8C8752A /* Resource.swift */,
+				CF0AC5D36D81FDE0DD4835EE7AF95CBD /* String+MD5.swift */,
+				62C7337920A0B39923B97F762CABCA75 /* ThreadHelper.swift */,
+				AE6FC7518D659E4B98C2BF2022FD4CF9 /* UIButton+Kingfisher.swift */,
+				D2A3773D47C46DD00D91212F81FAB2CC /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/UITestKit";
-			sourceTree = "<group>";
-		};
-		57AAAD58B36CD9F0D48417F0C6AA283D /* Kingfisher */ = {
-			isa = PBXGroup;
-			children = (
-				7BD2713682DADF2FD9A52A7E424BECF5 /* AnimatedImageView.swift */,
-				9AE55B73A90C659E0F63A8C5E1F98494 /* Box.swift */,
-				D3BF6E06647360F385EF826BCA755E4A /* CacheSerializer.swift */,
-				879FBAC0C2379A94F721934936C88490 /* Filter.swift */,
-				BB2720C39FFDB1AAC56EFC01713DDCE5 /* FormatIndicatedCacheSerializer.swift */,
-				920BDF939A91630F4B3C7779BBE7A3C1 /* Image.swift */,
-				4F18A394EAB9E609101E7DA2A79E3EA9 /* ImageCache.swift */,
-				662A2D62FAFBED79BFEBF833E2C0F586 /* ImageDownloader.swift */,
-				12066C93AB9A483DAD2CB6B667CC1925 /* ImagePrefetcher.swift */,
-				17053E723615053EF97BC62DBC2A8258 /* ImageProcessor.swift */,
-				F10DB64DD07AA168984C6F2C14C6C4C3 /* ImageTransition.swift */,
-				CBE4812876BCE2F7CE601502EF298184 /* ImageView+Kingfisher.swift */,
-				329FEF35122CF957240FDF14E2931EEB /* Indicator.swift */,
-				9DED8F27626E808E172FA72DB545E9CB /* Kingfisher.h */,
-				85CD1DB0B69CC4D878603BE77A3C91D3 /* Kingfisher.swift */,
-				BD1168A4DCD9BF8255BF1B6C43AD9BA1 /* KingfisherManager.swift */,
-				D3EF929B2F0C271086114EA5CD383618 /* KingfisherOptionsInfo.swift */,
-				157A912D147D1BFA0336951841545DF9 /* RequestModifier.swift */,
-				676A8FE8460B38D3971EC085D0FE996A /* Resource.swift */,
-				CA20D218F72308301AC117FD10CFE854 /* String+MD5.swift */,
-				03AB322AA232B4A2964804577EC1E65F /* ThreadHelper.swift */,
-				F0BD5B112CDBB4CED644A287B2F66006 /* UIButton+Kingfisher.swift */,
-				1E7996689BFC92EABAA7191C40DA5272 /* Support Files */,
-			);
+			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -278,38 +257,65 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				DE5B59A77C4C0CAA44B114372962D289 /* Pods */,
+				C517CED794A6DCB49D1F31E70F2CEFDA /* Pods */,
 				74CDB71858165940887EA3405B70A72A /* Products */,
 				44F28512EED8DBDA973314D999CA53B9 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		928FE2C162A4067EC679BB0FFADAA5AA /* Pods-MTG CardsTests */ = {
+		8DC84320AF1DEB79F246C943B3024398 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D271B3262F0D2BF6EBDDFFF3CD44B15D /* Info.plist */,
-				513E645A46391A7CFDC2265C51D582EE /* Pods-MTG CardsTests.modulemap */,
-				EFD03AC7D82BD969F0FD35CAE63F0726 /* Pods-MTG CardsTests-acknowledgements.markdown */,
-				D43290FF3529419F906D8EC0592F10AD /* Pods-MTG CardsTests-acknowledgements.plist */,
-				EBF8B26CC6DF33A295AAA21D33A98FED /* Pods-MTG CardsTests-dummy.m */,
-				17B68E2D59DB384424F727DFDCAEC89C /* Pods-MTG CardsTests-frameworks.sh */,
-				EDB80C46A95ED50F6D2400B11699D1E4 /* Pods-MTG CardsTests-resources.sh */,
-				9F523753E48C092E52BAE5FE08C3C6F9 /* Pods-MTG CardsTests-umbrella.h */,
-				9ED579D057AB75F9AA1C31849BD0EEF1 /* Pods-MTG CardsTests.debug.xcconfig */,
-				33844A4AA559FBF4E3C3705019AEF180 /* Pods-MTG CardsTests.release.xcconfig */,
+				04E91B85BEB1DB5AD51314DFCBA48ACD /* Info.plist */,
+				9CC1C433FE90C4A9EBA4665D0151F505 /* UITestKit.modulemap */,
+				D2B5D0B94B0828CE07E0FA0400563DCE /* UITestKit.xcconfig */,
+				829D9BE38F5FCC5CDD7656D8B98FD236 /* UITestKit-dummy.m */,
+				F39B5D11677EBC03B6B26D914DBF8255 /* UITestKit-prefix.pch */,
+				7BD07CDAAB7AC8035745AB83364589EA /* UITestKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UITestKit";
+			sourceTree = "<group>";
+		};
+		C517CED794A6DCB49D1F31E70F2CEFDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69F79AB1D0CD31373F69A60020E53EDA /* Kingfisher */,
+				FA09319FB5E25A00AD3697D666B2FAD8 /* UITestKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C6425F6815D3847B15477D5FFA44F83F /* Pods-MTG CardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				53EED5F942C64794D6B7112694F16BFA /* Info.plist */,
+				7F2E09F5115E0F558FC22CA1C6CA8B7B /* Pods-MTG CardsTests.modulemap */,
+				52F40F1ADED578587D9FE45453182215 /* Pods-MTG CardsTests-acknowledgements.markdown */,
+				D8D2FAAE1794F94FF7BF4C82E7F7F49C /* Pods-MTG CardsTests-acknowledgements.plist */,
+				A1AADA16EFAE88D894B2D2279CB55595 /* Pods-MTG CardsTests-dummy.m */,
+				F60F14F5158C3B6637B87C2983483CDA /* Pods-MTG CardsTests-frameworks.sh */,
+				07CA4DE6462FF50497270EEC228AC492 /* Pods-MTG CardsTests-resources.sh */,
+				C15D29BE87E5A23C7B51B93B4BADBB36 /* Pods-MTG CardsTests-umbrella.h */,
+				A6B27372492C84D8ED2BE978DF7D8E74 /* Pods-MTG CardsTests.debug.xcconfig */,
+				200FC2FCD2C16C1B9F7C372AA0B7A836 /* Pods-MTG CardsTests.release.xcconfig */,
 			);
 			name = "Pods-MTG CardsTests";
 			path = "Target Support Files/Pods-MTG CardsTests";
 			sourceTree = "<group>";
 		};
-		A62C9EFE962EAF9E7D50D78C17A515F6 /* UITestKit */ = {
+		D2A3773D47C46DD00D91212F81FAB2CC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				39E5CE24B12F5F771C790E3D597165EA /* TestKitBase.swift */,
-				B053DDB09E69B0995271860121E1CD06 /* UITestKitBase.swift */,
-				4A3CC80899A4806B1D9D34E0CF7A4302 /* Support Files */,
+				084C2613090B2C060D49EF98EEF4AF5B /* Info.plist */,
+				C615C1C918634E886283B47E7C9D4769 /* Kingfisher.modulemap */,
+				E2E47830BF73053325649C14A8ED6A4D /* Kingfisher.xcconfig */,
+				D8A5BE84C24DC90F6F5ACE88B4755327 /* Kingfisher-dummy.m */,
+				B1111B473121107D6A28D781BC5A6663 /* Kingfisher-prefix.pch */,
+				A58C643C9409ED9850541DC8E486EB28 /* Kingfisher-umbrella.h */,
 			);
-			path = UITestKit;
+			name = "Support Files";
+			path = "../Target Support Files/Kingfisher";
 			sourceTree = "<group>";
 		};
 		D5AA2A8D15F464674683086958C38862 /* iOS */ = {
@@ -322,27 +328,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DE5B59A77C4C0CAA44B114372962D289 /* Pods */ = {
+		FA09319FB5E25A00AD3697D666B2FAD8 /* UITestKit */ = {
 			isa = PBXGroup;
 			children = (
-				57AAAD58B36CD9F0D48417F0C6AA283D /* Kingfisher */,
-				A62C9EFE962EAF9E7D50D78C17A515F6 /* UITestKit */,
+				EB737D5128D6A71D4687E40DADA8D6DA /* TestKitBase.swift */,
+				ECB474E4F765B7D0E83A4414B13A863D /* UITestKitBase.swift */,
+				8DC84320AF1DEB79F246C943B3024398 /* Support Files */,
 			);
-			name = Pods;
+			name = UITestKit;
+			path = UITestKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		00AD0E6565819EDD9DC2E9295657E2BD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				607D176F8620CE53D3711429C510D5E5 /* Kingfisher-umbrella.h in Headers */,
-				D535F967F08593E5B52B238DE0793E6F /* Kingfisher.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		037C933FB4D8EC035700AEE9D7666572 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +355,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCE40A42812422FDB389D09C05A27153 /* Pods-MTG Cards-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADBBCEED9A9F8B15B7F98467EA6FB0E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				509A5621DAB44B06929B30ACCA7CA598 /* Kingfisher-umbrella.h in Headers */,
+				BA4DF38E820FF6B40FFABF8B1BBCC615 /* Kingfisher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,13 +395,13 @@
 			productReference = 638A36770E64840BE39D3F18487BC55D /* UITestKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2F0C0F810568D3E82219429D9D870F04 /* Kingfisher */ = {
+		4F87037150ABE2C9238B54E8F6E33F36 /* Kingfisher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66819D22A1CF928AEE67FD15232570E9 /* Build configuration list for PBXNativeTarget "Kingfisher" */;
+			buildConfigurationList = 6E151CD202797E4A2B6521EE8BECB6DE /* Build configuration list for PBXNativeTarget "Kingfisher" */;
 			buildPhases = (
-				6B38BCE9AC53CB2E4B610BC80768B056 /* Sources */,
-				B9FDF6DE1E5D9AA05F14B33C427FB5C2 /* Frameworks */,
-				00AD0E6565819EDD9DC2E9295657E2BD /* Headers */,
+				154F6D32400678B08A7CB2E5FD292972 /* Sources */,
+				A05AD251435FB24E096BBA193F9C99F0 /* Frameworks */,
+				BADBBCEED9A9F8B15B7F98467EA6FB0E /* Headers */,
 			);
 			buildRules = (
 			);
@@ -446,8 +454,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -461,7 +469,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2F0C0F810568D3E82219429D9D870F04 /* Kingfisher */,
+				4F87037150ABE2C9238B54E8F6E33F36 /* Kingfisher */,
 				FA8A65EF75FCF25A879DF94965B128FA /* Pods-MTG Cards */,
 				BB02F9F71DA221CE9A9F7D5CD94E128E /* Pods-MTG CardsTests */,
 				0361ABFD7647627F805BB88A7C8586C3 /* UITestKit */,
@@ -470,32 +478,34 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6B38BCE9AC53CB2E4B610BC80768B056 /* Sources */ = {
+		154F6D32400678B08A7CB2E5FD292972 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C1BB53BA70217F566B36537A3A63880 /* AnimatedImageView.swift in Sources */,
-				3F2A2A1940FBE921847ED80C8781F1C2 /* Box.swift in Sources */,
-				D7F44E70FBF99B6917AFB2218064DCF3 /* CacheSerializer.swift in Sources */,
-				934A36D6B847A9B437846EB47FD3C9C4 /* Filter.swift in Sources */,
-				BDDA79DF79ECE8FAA434BC2D6D31A7C1 /* FormatIndicatedCacheSerializer.swift in Sources */,
-				36F504803AC5AE737F3A7F227A2883BE /* Image.swift in Sources */,
-				D93FFDFFDED6C6DE36B7669792DA27ED /* ImageCache.swift in Sources */,
-				1F9D95C57864416D56FADC88A5A50457 /* ImageDownloader.swift in Sources */,
-				AB860DDD59CD5022F61D6BD31F634CAC /* ImagePrefetcher.swift in Sources */,
-				15F192484CD7833C82BBB6500CE24C50 /* ImageProcessor.swift in Sources */,
-				7B262B1E8AC91308347656FCF82E1192 /* ImageTransition.swift in Sources */,
-				BB2D09C37CAA41F61C8231B42449818F /* ImageView+Kingfisher.swift in Sources */,
-				D4D6C0A689145B53E332183C4B1AA8A2 /* Indicator.swift in Sources */,
-				6A007E9D44771E83A6D33E3A8EB4003E /* Kingfisher-dummy.m in Sources */,
-				E31D9ECACCCF91BA47600348F7387D80 /* Kingfisher.swift in Sources */,
-				2E154F53E56940FC016558CB1D9B49A3 /* KingfisherManager.swift in Sources */,
-				F2F46DDB7D7FC3B69CCFA48E84DC9108 /* KingfisherOptionsInfo.swift in Sources */,
-				62FF161052DEB878DBC35D8402ED380F /* RequestModifier.swift in Sources */,
-				4AD00EED32EA5B3D946BD06BD7A425AF /* Resource.swift in Sources */,
-				2A256604A39C74C9C9954DAB2041878D /* String+MD5.swift in Sources */,
-				23B956A659AF2E76734D07458429F29F /* ThreadHelper.swift in Sources */,
-				C8A24B5D1DE2CE90CDB894280AB8DC89 /* UIButton+Kingfisher.swift in Sources */,
+				4074AA6F2557EF7970DEDE67B04433B6 /* AnimatedImageView.swift in Sources */,
+				D1575AAADDCEA395E3828EBAC2A772FA /* Box.swift in Sources */,
+				A9D2A6547EE5F6532EF8D1F1870BF158 /* CacheSerializer.swift in Sources */,
+				114397DE4A2DC0204868A79F4BE13769 /* Filter.swift in Sources */,
+				03E0A134F1DDF33EA16F004F1A230CA1 /* FormatIndicatedCacheSerializer.swift in Sources */,
+				B924069CD75769E22765912C66A87BF3 /* Image.swift in Sources */,
+				6486781D756A9D71FE5C6E56CC9A343F /* ImageCache.swift in Sources */,
+				DA7A5ECA4C0B39776007BE89B99227EF /* ImageDownloader.swift in Sources */,
+				B564B930C3B6CCFCC109ABF374B21CE6 /* ImageModifier.swift in Sources */,
+				BE9FB5E8188E0B68DB277B09A06E79BA /* ImagePrefetcher.swift in Sources */,
+				2283375C0C99789CF47EEDA0CE9D3D80 /* ImageProcessor.swift in Sources */,
+				7B2A61E55C43E9B12E5B7DD852456AEE /* ImageTransition.swift in Sources */,
+				0096C6816AC3D92834AB65C49518C177 /* ImageView+Kingfisher.swift in Sources */,
+				103228D906B112AA75562E8B17179127 /* Indicator.swift in Sources */,
+				95156987028D309F91AC55FBDFE01643 /* Kingfisher-dummy.m in Sources */,
+				E9E5F082818BE1AA4722E77DD066450F /* Kingfisher.swift in Sources */,
+				A8A79840E81BFA3D8DCC29BE71F1AEC4 /* KingfisherManager.swift in Sources */,
+				2ABE0F8940C00BD429E33ED7F7C9EA1D /* KingfisherOptionsInfo.swift in Sources */,
+				498DC29155467AC093701C1AF5EE3807 /* Placeholder.swift in Sources */,
+				C32C7FE70764DE37935F6A5D80CB17C7 /* RequestModifier.swift in Sources */,
+				3464228E4F1F63DBCA803CC848A6A8C0 /* Resource.swift in Sources */,
+				CEEB7C897409C08DF53289E307AB987C /* String+MD5.swift in Sources */,
+				CE38861F1268294930C074FC3F807E55 /* ThreadHelper.swift in Sources */,
+				FED97351EC4705507DAB175106B819C8 /* UIButton+Kingfisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +541,7 @@
 		570177500C3E5C9C134AA3DB843469C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kingfisher;
-			target = 2F0C0F810568D3E82219429D9D870F04 /* Kingfisher */;
+			target = 4F87037150ABE2C9238B54E8F6E33F36 /* Kingfisher */;
 			targetProxy = 6C51BD7059DE36F3AAEB3E74187C0028 /* PBXContainerItemProxy */;
 		};
 		81B4AA6CA5CFA34435BE815409639E58 /* PBXTargetDependency */ = {
@@ -543,9 +553,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0198A6FCE0031509E4EAAA2F4D3E1221 /* Release */ = {
+		052541D5B526FA072BECE8ED14078BBE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE46FEE12DD474D74EC35108D8BA661C /* UITestKit.xcconfig */;
+			baseConfigurationReference = 200FC2FCD2C16C1B9F7C372AA0B7A836 /* Pods-MTG CardsTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -556,78 +566,313 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UITestKit/UITestKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UITestKit/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-MTG CardsTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UITestKit/UITestKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = UITestKit;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MTG CardsTests/Pods-MTG CardsTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MTG_CardsTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		163D87BE96A63549B0EACF1CC31A2E90 /* Debug */ = {
+		233B0E497A8B1C8D5A89DCA4E0796E20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6B27372492C84D8ED2BE978DF7D8E74 /* Pods-MTG CardsTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MTG CardsTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MTG CardsTests/Pods-MTG CardsTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MTG_CardsTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		26F954BA177A9A46FFFD4E23ED11D67A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		422467F431548195F783626D4E7517A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2E47830BF73053325649C14A8ED6A4D /* Kingfisher.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7CC400D469427BFEF83A93D07941F841 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2B5D0B94B0828CE07E0FA0400563DCE /* UITestKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UITestKit/UITestKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UITestKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UITestKit/UITestKit.modulemap";
+				PRODUCT_NAME = UITestKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CDAB4919AC6EF1B73140FC71667B9052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 255048B7CE1172D5FCD5436BECB6F364 /* Pods-MTG Cards.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MTG Cards/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MTG Cards/Pods-MTG Cards.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MTG_Cards;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CE01049C1B45E6EBA57DA4BFE5D491B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2B5D0B94B0828CE07E0FA0400563DCE /* UITestKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UITestKit/UITestKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UITestKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UITestKit/UITestKit.modulemap";
+				PRODUCT_NAME = UITestKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E2BF6D6731C31DE69900B7B24E6F0445 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		65B56E18A730943CC8358E93D5BF1ED3 /* Debug */ = {
+		F2F6E0397130394B9F7E9602EA3021F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81BEF8EA99370507F98EC0D1D80CFA9C /* Pods-MTG Cards.debug.xcconfig */;
+			baseConfigurationReference = 7C1B262EF635CF421DD77A86223E6EB0 /* Pods-MTG Cards.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -638,16 +883,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-MTG Cards/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-MTG Cards/Pods-MTG Cards.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -657,271 +898,39 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		707B86CFB21B645E37109F39754D4051 /* Release */ = {
+		FD8C0B61C04788B3D7DD8B3DE5FE9CBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2E47830BF73053325649C14A8ED6A4D /* Kingfisher.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		979E051475AD7560E4BF05B04D9FB798 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 509351DEB58BBC8B174D3CEDC4458238 /* Kingfisher.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Kingfisher;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AA2F5966B5C14A133EFDE9CBC612AA21 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9ED579D057AB75F9AA1C31849BD0EEF1 /* Pods-MTG CardsTests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MTG CardsTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MTG CardsTests/Pods-MTG CardsTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MTG_CardsTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AC25DAFE90C28B763843829406863906 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C41CD4050337E5B8427F86A777F9415 /* Pods-MTG Cards.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MTG Cards/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MTG Cards/Pods-MTG Cards.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MTG_Cards;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		ACD239C4FAA3E99063817768EE78456F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE46FEE12DD474D74EC35108D8BA661C /* UITestKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UITestKit/UITestKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UITestKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UITestKit/UITestKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = UITestKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D4BEC9BB69A201538402698C33E243A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33844A4AA559FBF4E3C3705019AEF180 /* Pods-MTG CardsTests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MTG CardsTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MTG CardsTests/Pods-MTG CardsTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MTG_CardsTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E53E346C46A3268EE6CF202739C1718D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 509351DEB58BBC8B174D3CEDC4458238 /* Kingfisher.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Kingfisher;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -933,8 +942,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				163D87BE96A63549B0EACF1CC31A2E90 /* Debug */,
-				707B86CFB21B645E37109F39754D4051 /* Release */,
+				E2BF6D6731C31DE69900B7B24E6F0445 /* Debug */,
+				26F954BA177A9A46FFFD4E23ED11D67A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -942,8 +951,8 @@
 		32B708B4E1178C8C1A3E9AABB8965969 /* Build configuration list for PBXNativeTarget "Pods-MTG Cards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65B56E18A730943CC8358E93D5BF1ED3 /* Debug */,
-				AC25DAFE90C28B763843829406863906 /* Release */,
+				F2F6E0397130394B9F7E9602EA3021F0 /* Debug */,
+				CDAB4919AC6EF1B73140FC71667B9052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -951,17 +960,17 @@
 		623E253CEA574CEC5262E176410FC188 /* Build configuration list for PBXNativeTarget "UITestKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACD239C4FAA3E99063817768EE78456F /* Debug */,
-				0198A6FCE0031509E4EAAA2F4D3E1221 /* Release */,
+				7CC400D469427BFEF83A93D07941F841 /* Debug */,
+				CE01049C1B45E6EBA57DA4BFE5D491B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66819D22A1CF928AEE67FD15232570E9 /* Build configuration list for PBXNativeTarget "Kingfisher" */ = {
+		6E151CD202797E4A2B6521EE8BECB6DE /* Build configuration list for PBXNativeTarget "Kingfisher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				979E051475AD7560E4BF05B04D9FB798 /* Debug */,
-				E53E346C46A3268EE6CF202739C1718D /* Release */,
+				422467F431548195F783626D4E7517A1 /* Debug */,
+				FD8C0B61C04788B3D7DD8B3DE5FE9CBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -969,8 +978,8 @@
 		79ADDC6BF9E240A55489C5BAB4AA1FC9 /* Build configuration list for PBXNativeTarget "Pods-MTG CardsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA2F5966B5C14A133EFDE9CBC612AA21 /* Debug */,
-				D4BEC9BB69A201538402698C33E243A7 /* Release */,
+				233B0E497A8B1C8D5A89DCA4E0796E20 /* Debug */,
+				052541D5B526FA072BECE8ED14078BBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -33,6 +33,7 @@ class Card: CustomDebugStringConvertible, Equatable {
     let power: String
     let toughness: String
     let imageUrlString: String
+    let multiverseid: Int
 
     init(from dictionary: [String: Any]) {
         id = dictionary["id"] as? String ?? ""
@@ -49,6 +50,7 @@ class Card: CustomDebugStringConvertible, Equatable {
         text = dictionary["text"] as? String ?? ""
         power = dictionary["power"] as? String ?? ""
         toughness = dictionary["toughness"] as? String ?? ""
+        multiverseid = dictionary["multiverseid"] as? Int ?? -1
         imageUrlString = dictionary["imageUrl"] as? String ?? ""
     }
 
@@ -57,7 +59,7 @@ class Card: CustomDebugStringConvertible, Equatable {
     }
 
     var debugDescription: String {
-        return "id: '\(id)', name: '\(name)', manaCost: '\(manaCost)', cmc: '\(cmc)', colors: '\(colors)', colorIdentity: '\(colorIdentity)', type: '\(type)', types: '\(types)', subtypes: '\(subtypes)', rarity: '\(rarity)', set: '\(set)', text: '\(text)', power: '\(power)', toughness: '\(toughness)', imageUrlString: '\(imageUrlString)'"
+        return "id: '\(id)', name: '\(name)', manaCost: '\(manaCost)', cmc: '\(cmc)', colors: '\(colors)', colorIdentity: '\(colorIdentity)', type: '\(type)', types: '\(types)', subtypes: '\(subtypes)', rarity: '\(rarity)', set: '\(set)', text: '\(text)', power: '\(power)', toughness: '\(toughness)', multiverseid: \(multiverseid), imageUrlString: '\(imageUrlString)'"
     }
 
 }

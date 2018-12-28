@@ -1,15 +1,25 @@
 PODS:
-  - Kingfisher (3.10.3)
-  - UITestKit (0.1.0)
+  - Kingfisher (4.10.1)
+  - UITestKit (0.1.1)
 
 DEPENDENCIES:
   - Kingfisher
-  - UITestKit
+  - UITestKit (from `https://github.com/intere/UITestKit.git`, branch `release/0.1.2`)
+
+EXTERNAL SOURCES:
+  UITestKit:
+    :branch: release/0.1.2
+    :git: https://github.com/intere/UITestKit.git
+
+CHECKOUT OPTIONS:
+  UITestKit:
+    :commit: 5b245062a7817b5d85b8c7896781f3ff8cb379a3
+    :git: https://github.com/intere/UITestKit.git
 
 SPEC CHECKSUMS:
-  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
-  UITestKit: 5861427f6723ab79256507fe224b5c65955677a8
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  UITestKit: 8845fac7de0abcbc92ee7506e61fd2c68a5cc17f
 
-PODFILE CHECKSUM: 849aee2c422c76c8d1c5a630ea6e5f9d4555e4b2
+PODFILE CHECKSUM: 2132076128c7665cf7da06cec3b5b671a5d1c47d
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.4.0

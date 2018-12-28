@@ -25,9 +25,7 @@ class CardSearchUITest: BaseUITest {
         MockCardDataService.beginMocking()
 
         // Wait for the Card Search VC to load
-        waitForCondition({
-            return self.cardSearchVC != nil
-        }, timeout: 5)
+        XCTAssertTrue(waitForCondition({ self.cardSearchVC != nil }, timeout: 5), topVCScreenshot)
     }
     
     override func tearDown() {
@@ -58,6 +56,7 @@ extension CardSearchUITest {
 
     func testNoResultsInSearch() {
         guard let cardSearchVC = cardSearchVC else {
+            XCTFail(topVCScreenshot)
             return XCTFail("Failed to get the Card Search VC, it was \(topVCType)")
         }
 
@@ -109,6 +108,7 @@ extension CardSearchUITest {
     /// Validate that when we search for multiple results, the table renders those results
     func testSearchMultipleResults() {
         guard let cardSearchVC = cardSearchVC else {
+            XCTFail(topVCScreenshot)
             return XCTFail("Failed to get the Card Search VC, it was \(topVCType)")
         }
 
@@ -135,9 +135,7 @@ extension CardSearchUITest {
             cardSearchVC.tableView.scrollToRow(at: indexPath, at: .middle, animated: false)
             waitForDuration(0.1)
             let cell = cardSearchVC.tableView.cellForRow(at: indexPath)
-            waitForCondition({
-                cell is CardSearchResultTableViewCell
-            }, timeout: 3)
+            waitForCondition({ cell is CardSearchResultTableViewCell }, timeout: 3)
             XCTAssertTrue(cell is CardSearchResultTableViewCell, "Cell at index \(i) wasn't the right type, it was \(String(describing: cell?.classForCoder))")
         }
     }
@@ -150,6 +148,7 @@ extension CardSearchUITest {
 
     func testAppDemo() {
         guard let cardSearchVC = cardSearchVC else {
+            XCTFail(topVCScreenshot)
             return XCTFail("Couldn't get a reference to the Card Search VC, it was \(topVCType)")
         }
 
@@ -158,7 +157,7 @@ extension CardSearchUITest {
         cardSearchVC.search(for: searchTerm)
 
         XCTAssertTrue(waitForCondition({
-            return cardSearchVC.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) is CardSearchResultTableViewCell
+            cardSearchVC.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) is CardSearchResultTableViewCell
         }, timeout: 3), "No search reults were available")
 
         waitForDuration(1)

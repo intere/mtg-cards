@@ -18,4 +18,9 @@ class BaseUITest: UITestKitBase {
         return topVC as? CardSearchResultTableViewController
     }
 
+    /// Gets the `CardInfoTableViewController` if it's the top VC
+    var cardInfoVC: CardInfoTableViewController? {
+        return topVC as? CardInfoTableViewController
+    }
+
 }
