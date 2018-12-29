@@ -31,10 +31,7 @@ class AppUISmokeTest: BaseUITest {
         let searchText = "Collected Comp"
         XCTAssertTrue(waitForCondition({ self.cardSearchVC != nil }, timeout: 1), topVCScreenshot)
 
-        // Show what we're searching for
         cardSearchVC?.searchBar.text = searchText
-
-        // Invoke the search for "Drunken" (we know there are no results, since we control the data source)
         cardSearchVC?.search(for: searchText)
         pauseForUIDebug()
 
@@ -43,13 +40,12 @@ class AppUISmokeTest: BaseUITest {
                 return false
             }
             guard cardSearchVC.tableView.numberOfRows(inSection: 0) > 0,
-                CardSearchResultTableViewController.Constants.noResultsCellId
-                    != cardSearchVC.tableView(cardSearchVC.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier else {
+                ![CardSearchResultTableViewController.Constants.noResultsCellId, CardSearchResultTableViewController.Constants.enterSearchCellId].contains(cardSearchVC.tableView(cardSearchVC.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier) else {
                     return false
             }
             return true
 
-        }, timeout: 5), topVCScreenshot)
+        }, timeout: 30), topVCScreenshot)
         pauseForUIDebug()
 
         if let cardSearchVC = cardSearchVC {
@@ -65,10 +61,7 @@ class AppUISmokeTest: BaseUITest {
         let searchText = "Cavern"
         XCTAssertTrue(waitForCondition({ self.cardSearchVC != nil }, timeout: 1), topVCScreenshot)
 
-        // Show what we're searching for
         cardSearchVC?.searchBar.text = searchText
-
-        // Invoke the search for "Drunken" (we know there are no results, since we control the data source)
         cardSearchVC?.search(for: searchText)
         pauseForUIDebug()
 
@@ -77,13 +70,12 @@ class AppUISmokeTest: BaseUITest {
                 return false
             }
             guard cardSearchVC.tableView.numberOfRows(inSection: 0) > 0,
-                CardSearchResultTableViewController.Constants.noResultsCellId
-                    != cardSearchVC.tableView(cardSearchVC.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier else {
+                ![CardSearchResultTableViewController.Constants.noResultsCellId, CardSearchResultTableViewController.Constants.enterSearchCellId].contains(cardSearchVC.tableView(cardSearchVC.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier) else {
                         return false
             }
             return true
 
-        }, timeout: 5), topVCScreenshot)
+        }, timeout: 30), topVCScreenshot)
         pauseForUIDebug()
 
         if let cardSearchVC = cardSearchVC, let results = cardSearchVC.results, let row = results.firstIndex(where: { $0.name == "Cavern of Souls" }) {
@@ -124,7 +116,7 @@ extension AppUISmokeTest {
             }
             return true
 
-        }, timeout: 5), topVCScreenshot)
+        }, timeout: 30), topVCScreenshot)
         pauseForUIDebug()
 
         var card: Card?
@@ -141,7 +133,7 @@ extension AppUISmokeTest {
 
         if let card = card, let url = URL(string: "http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=\(card.multiverseid)") {
             presentModally(viewController: SFSafariViewController(url: url))
-            waitForDuration(3)
+            waitForDuration(1)
         }
         pauseForUIDebug()
         XCTAssertTrue(waitForCondition({ self.cardInfoVC != nil }, timeout: 1), topVCScreenshot)
@@ -150,7 +142,7 @@ extension AppUISmokeTest {
         if topVC is SFSafariViewController {
             topVC?.dismiss(animated: false)
         }
-        XCTAssertTrue(waitForCondition({ !(self.topVCType is SFSafariViewController) }, timeout: 1))
+        XCTAssertTrue(waitForCondition({ !(self.topVC is SFSafariViewController) }, timeout: 1))
     }
 
 }

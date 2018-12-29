@@ -20,6 +20,7 @@ class CardSearchUITest: BaseUITest {
 
     override func setUp() {
         super.setUp()
+        shouldPauseUI = true
 
         // Inject the mock framework
         MockCardDataService.beginMocking()
@@ -96,8 +97,7 @@ extension CardSearchUITest {
         XCTAssertTrue(waitForCondition({
             return self.cardSearchVC?.tableView.numberOfRows(inSection: 0) ?? 0 > 0
         }, timeout: 1), "We didn't load any results")
-
-        waitForDuration(1)
+        pauseForUIDebug()
 
         // Ensure we have 1 row
         XCTAssertEqual(1, cardSearchVC.tableView.numberOfRows(inSection: 0))
@@ -160,7 +160,7 @@ extension CardSearchUITest {
             cardSearchVC.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) is CardSearchResultTableViewCell
         }, timeout: 3), "No search reults were available")
 
-        waitForDuration(1)
+        pauseForUIDebug()
 
         searchTerm = "Na"
         delayTypingWord(word: searchTerm)
@@ -171,9 +171,10 @@ extension CardSearchUITest {
         }, timeout: 3), "No search reults were available")
 
         XCTAssertEqual(2, self.cardSearchVC?.tableView.numberOfRows(inSection: 0))
-        waitForDuration(0.5)
+        pauseForUIDebug()
+
         cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 1, section: 0), at: .middle, animated: false)
-        waitForDuration(1)
+        pauseForUIDebug()
 
         searchTerm = "R"
 
@@ -187,17 +188,17 @@ extension CardSearchUITest {
         XCTAssertEqual(15, self.cardSearchVC?.tableView.numberOfRows(inSection: 0))
 
         cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 1, section: 0), at: .bottom, animated: false)
-        waitForDuration(1)
+        pauseForUIDebug()
         cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 3, section: 0), at: .bottom, animated: false)
-        waitForDuration(1)
+        pauseForUIDebug()
         cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 5, section: 0), at: .bottom, animated: false)
-        waitForDuration(1)
+        pauseForUIDebug()
         cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 7, section: 0), at: .bottom, animated: false)
-        waitForDuration(1)
+        pauseForUIDebug()
         cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 9, section: 0), at: .bottom, animated: false)
-        waitForDuration(1)
+        pauseForUIDebug()
         cardSearchVC.tableView.scrollToRow(at: IndexPath(row: 13, section: 0), at: .bottom, animated: false)
-        waitForDuration(2)
+        pauseForUIDebug()
     }
 }
 
@@ -206,7 +207,7 @@ extension CardSearchUITest {
 
 extension CardSearchUITest {
 
-    func delayTypingWord(word: String, delay: TimeInterval = 0.5) {
+    func delayTypingWord(word: String, delay: TimeInterval = 0.25) {
         guard let cardSearchVC = cardSearchVC else {
             return
         }
